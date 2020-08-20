@@ -1,8 +1,8 @@
-<!-- ## WebAssembly support -->
-## WebAssembly サポート
+<!-- ## WASM support -->
+## WASM サポート
 
-<!-- Deno can execute [WebAssembly](https://webassembly.org/) binaries. -->
-Denoは [WebAssembly](https://webassembly.org/) バイナリを実行することが出来ます。
+<!-- Deno can execute [wasm](https://webassembly.org/) binaries. -->
+Denoは [wasm](https://webassembly.org/) バイナリを実行することが出来ます。
 
 <!-- prettier-ignore-start -->
 ```js

@@ -42,13 +42,13 @@ Instructions on how to build from source can be found
 1. That there is a related issue and it is referenced in the PR text.
 2. There are tests that cover the changes.
 3. Ensure `cargo test` passes.
-4. Format your code with `./tools/format.py`
+4. Format your code with `tools/format.py`
 5. Make sure `./tools/lint.py` passes.
 -->
 1. 関係するissueがありPRテキストに参照されているかどうか。
 2. 変更をカバーするテストが存在するか。
 3. `cargo test` をパスするかどうか。
-4. `./tools/format.py` でフォーマットされているかどうか。
+4. `tools/format.py` でフォーマットされているかどうか。
 5. `./tools/lint.py` をパスするかどうか。
 
 <!-- ## Changes to `third_party` -->

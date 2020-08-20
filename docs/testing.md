@@ -27,10 +27,10 @@ Deno.test("hello world #1", () => {
 // Fully fledged test definition, longer form, but configurable (see below)
 Deno.test({
   name: "hello world #2",
-  fn: () => {
+  fn() => {
     const x = 1 + 2;
     assertEquals(x, 3);
-  },
+  }
 });
 ```
 -->
@@ -44,10 +44,10 @@ Deno.test("hello world #1", () => {
 // 完全で本格的なテスト定義で長いですが、設定可能です(下記参照)
 Deno.test({
   name: "hello world #2",
-  fn: () => {
+  fn() => {
     const x = 1 + 2;
     assertEquals(x, 3);
-  },
+  }
 });
 ```
 

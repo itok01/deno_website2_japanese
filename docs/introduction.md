@@ -121,3 +121,19 @@ have been historically written with bash or python.
 -->
 - リモートにあるコードは最初の実行のときに取得、キャッシュされ、`--reload`フラッグ付きで実行されるまでアップデートされません。(だから、飛行機の中でも動きます。)
 - リモートのURLからロードされたモジュール/ファイルはイミュータブルでキャッシュ可能になるよう意図しています。
+
+## Logos
+
+<!--
+These Deno logos, like the Deno software, are distributed under the MIT license
+(public domain and free for use)
+-->
+DenoソフトウェアなどのDenoロゴはMITライセンスのもとで配布されています(パブリックドメインで自由に使用できます)
+
+- [A hand drawn one by @ry](https://deno.land/images/deno_logo.png)
+
+- [An animated one by @hashrock](https://github.com/denolib/animated-deno-logo/)
+
+- [A high resolution SVG one by @kevinkassimo](https://github.com/denolib/high-res-deno-logo)
+
+- [A pixelated animation one by @tanakaworld](https://deno.land/images/deno_logo_4.gif)
