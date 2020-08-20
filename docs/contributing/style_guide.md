@@ -496,7 +496,7 @@ test myTestFunction ... ok
 import { assertEquals } from "https://deno.land/std@$STD_VERSION/testing/asserts.ts";
 import { foo } from "./mod.ts";
 
-Deno.test("myTestFunction", function () {
+Deno.test("myTestFunction" function() {
   assertEquals(foo(), { bar: "bar" });
 });
 ```
