@@ -73,7 +73,7 @@ file in the `/etc` directory:
 この例では `/usr` ディレクトリのみを含む許可リストでファイルシステムを制限しますが、プロセスが `/etc` ディレクトリの中のファイルにアクセスしようとしているため実行に失敗します:
 
 ```shell
-$ deno run --allow-read=/usr https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd
+$ deno run --allow-read=/usr https://deno.land/std/examples/cat.ts /etc/passwd
 error: Uncaught PermissionDenied: read access to "/etc/passwd", run again with the --allow-read flag
 ► $deno$/dispatch_json.ts:40:11
     at DenoError ($deno$/errors.ts:20:5)
@@ -84,7 +84,7 @@ error: Uncaught PermissionDenied: read access to "/etc/passwd", run again with t
 許可リストに `/etc` を指定し正しいパーミッションでもう一度試してみてください:
 
 ```shell
-deno run --allow-read=/etc https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd
+deno run --allow-read=/etc https://deno.land/std/examples/cat.ts /etc/passwd
 ```
 
 <!-- `--allow-write` works the same as `--allow-read`. -->

@@ -35,7 +35,7 @@ console.log("Welcome to Deno 🦕");
 こちらを試しください:
 
 ```shell
-deno run https://deno.land/std@$STD_VERSION/examples/welcome.ts
+deno run https://deno.land/std/examples/welcome.ts
 ```
 
 <!-- ### Making an HTTP request -->
@@ -86,7 +86,7 @@ await Deno.stdout.write(body);
 こちらを試しください:
 
 ```shell
-deno run https://deno.land/std@$STD_VERSION/examples/curl.ts https://example.com
+deno run https://deno.land/std/examples/curl.ts https://example.com
 ```
 
 <!--
@@ -101,7 +101,7 @@ permission to do certain 'privileged' actions, such as access the network.
 正しいパーミッションフラグを与えて再度試してみてください:
 
 ```shell
-deno run --allow-net=example.com https://deno.land/std@$STD_VERSION/examples/curl.ts https://example.com
+deno run --allow-net=example.com https://deno.land/std/examples/curl.ts https://example.com
 ```
 
 <!-- ### Reading a file -->
@@ -147,7 +147,7 @@ I/O streams in Deno.
 こちらを試しください:
 
 ```shell
-deno run --allow-read https://deno.land/std@$STD_VERSION/examples/cat.ts /etc/passwd
+deno run --allow-read https://deno.land/std/examples/cat.ts /etc/passwd
 ```
 
 <!-- ### TCP server -->
@@ -176,7 +176,7 @@ explicit permission. To allow accessing the network, use a command-line flag:
 セキュリティ上の理由から、Denoは明示的なパーミッションなしにプログラムがネットワークにアクセスすることが出来ません。ネットワークへのアクセスを許可するにはコマンドラインフラッグを使ってください:
 
 ```shell
-deno run --allow-net https://deno.land/std@$STD_VERSION/examples/echo_server.ts
+deno run --allow-net https://deno.land/std/examples/echo_server.ts
 ```
 
 <!-- To test it, try sending data to it with netcat: -->

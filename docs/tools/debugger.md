@@ -28,19 +28,19 @@ the first line of code.
 
 <!--
 Let's try debugging a program using Chrome Devtools. For this, we'll use
-[file_server.ts](https://deno.land/std@$STD_VERSION/http/file_server.ts) from
-`std`, a static file server.
+[file_server.ts](https://deno.land/std@v0.50.0/http/file_server.ts) from `std`,
+a static file server.
 -->
-Chrome Devtoolsを使ってプログラムをデバッグしてみましょう。静的ファイルサーバーである `std` の [file_server.ts](https://deno.land/std@$STD_VERSION/http/file_server.ts) を使います。
+Chrome Devtoolsを使ってプログラムをデバッグしてみましょう。静的ファイルサーバーである `std` の [file_server.ts](https://deno.land/std@v0.55.0/http/file_server.ts) を使います。
 
 <!-- Use the `--inspect-brk` flag to break execution on the first line: -->
 最初の行に実行を中断するための `--inspect-brk` フラグを使ってください。
 
 ```shell
-$ deno run --inspect-brk --allow-read --allow-net https://deno.land/std@$STD_VERSION/http/file_server.ts
+$ deno run --inspect-brk --allow-read --allow-net https://deno.land/std@v0.50.0/http/file_server.ts
 Debugger listening on ws://127.0.0.1:9229/ws/1e82c406-85a9-44ab-86b6-7341583480b1
-Download https://deno.land/std@$STD_VERSION/http/file_server.ts
-Compile https://deno.land/std@$STD_VERSION/http/file_server.ts
+Download https://deno.land/std@v0.50.0/http/file_server.ts
+Compile https://deno.land/std@v0.50.0/http/file_server.ts
 ...
 ```
 
@@ -161,7 +161,7 @@ with a script name if you want a fixed entry point.
 論理ソースファイルをデバッグしてみましょう。`server.ts` を作ってください:
 
 ```ts
-import { serve } from "https://deno.land/std@$STD_VERSION/http/server.ts";
+import { serve } from "https://deno.land/std@v0.50.0/http/server.ts";
 const server = serve({ port: 8000 });
 console.log("http://localhost:8000/");
 

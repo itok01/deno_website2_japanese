@@ -19,7 +19,7 @@ for await (const conn of listener) {
 このプログラムがスタートするとき、プログラムはパーミッションが拒否されたエラーを投げるでしょう。
 
 ```shell
-$ deno run https://deno.land/std@$STD_VERSION/examples/echo_server.ts
+$ deno run https://deno.land/std/examples/echo_server.ts
 error: Uncaught PermissionDenied: network access to "0.0.0.0:8080", run again with the --allow-net flag
 ► $deno$/dispatch_json.ts:40:11
     at DenoError ($deno$/errors.ts:20:5)
@@ -33,7 +33,7 @@ explicit permission. To allow accessing the network, use a command-line flag:
 セキュリティ上の理由でDenoは明示的なパーミッションがない限りプログラムはネットワークにアクセスされません。ネットワークアクセスを許可するにはコマンドラインフラグを使ってください:
 
 ```shell
-deno run --allow-net https://deno.land/std@$STD_VERSION/examples/echo_server.ts
+deno run --allow-net https://deno.land/std/examples/echo_server.ts
 ```
 
 <!-- To test it, try sending data to it with netcat: -->

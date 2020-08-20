@@ -55,16 +55,16 @@ Deno.test({
 ## アサーション
 
 <!--
-There are some useful assertion utilities at
-https://deno.land/std@$STD_VERSION/testing#usage to make testing easier:
+There are some useful assertion utilities at https://deno.land/std/testing#usage
+to make testing easier:
 -->
-テストを簡単にするアサーションユーティリティは https://deno.land/std@$STD_VERSION/testing#usage にあります:
+テストを簡単にするアサーションユーティリティは https://deno.land/std/testing#usage にあります:
 
 ```ts
 import {
   assertEquals,
   assertArrayContains,
-} from "https://deno.land/std@$STD_VERSION/testing/asserts.ts";
+} from "https://deno.land/std/testing/asserts.ts";
 
 Deno.test("hello world", () => {
   const x = 1 + 2;
@@ -84,7 +84,7 @@ promise を返すテスト関数を渡すことで非同期のコードテスト
 
 <!--
 ```ts
-import { delay } from "https://deno.land/std@$STD_VERSION/async/delay.ts";
+import { delay } from "https://deno.land/std/async/delay.ts";
 
 Deno.test("async hello world", async () => {
   const x = 1 + 2;
@@ -99,7 +99,7 @@ Deno.test("async hello world", async () => {
 ```
 -->
 ```ts
-import { delay } from "https://deno.land/std@$STD_VERSION/async/delay.ts";
+import { delay } from "https://deno.land/std/async/delay.ts";
 
 Deno.test("async hello world", async () => {
   const x = 1 + 2;

@@ -14,7 +14,7 @@ directly imported. E.g.
 DenoはJavaScriptとTypeScriptの両方をランタイムの主要言語としてサポートしています。つまり、完全なモジュール名と拡張子(もしくはサーバーが正しいメディアタイプを提供)を要求します。加えて、Denoは"魔法の"モジュール解決をしません。代わりに指定されたファイル(拡張子込み)か完全なURLでモジュールをインポートします。TypeScriptモジュールは直接インポートすることが出来ます。例えば、
 
 ```
-import { Response } from "https://deno.land/std@$STD_VERSION/http/server.ts";
+import { Response } from "https://deno.land/std@0.53.0/http/server.ts";
 import { queue } from "./collections.ts";
 ```
 
@@ -49,8 +49,8 @@ example `tsconfig.json` with this option
 
 <!--
 Because there is no type information when using `--no-check`, `const enum` is
-not supported because it is type-directed. `--no-check` also does not support
-the legacy `import =` and `export =` syntax.
+not supported because it is are type-directed. `--no-check` also does not
+support the legacy `import =` and `export =` syntax.
 -->
 `--no-check` を使っている時、型情報がないため、 `const enum` は型であるためサポートされません。`--no-check` はかつての `import =` と `export =` もサポートしません。
 

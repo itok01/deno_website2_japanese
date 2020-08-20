@@ -107,7 +107,7 @@ have been historically written with bash or python.
 - "ESモジュール"を使い`require()`をサポートしません。サードパーティモジュールはURLによってインポートされます: 
 
   ```javascript
-  import * as log from "https://deno.land/std@$STD_VERSION/log/mod.ts";
+  import * as log from "https://deno.land/std/log/mod.ts";
   ```
 
 <!-- ## Other key behaviors -->

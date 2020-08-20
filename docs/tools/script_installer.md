@@ -20,8 +20,8 @@ the specified CLI flags and main module. It is placed in the installation root's
 Example:
 
 ```shell
-$ deno install --allow-net --allow-read https://deno.land/std@$STD_VERSION/http/file_server.ts
-[1/1] Compiling https://deno.land/std@$STD_VERSION/http/file_server.ts
+$ deno install --allow-net --allow-read https://deno.land/std/http/file_server.ts
+[1/1] Compiling https://deno.land/std/http/file_server.ts
 
 ✅ Successfully installed file_server.
 /Users/deno/.deno/bin/file_server
@@ -33,7 +33,7 @@ To change the executable name, use `-n`/`--name`:
 実行可能ファイル名を変えるためには、`-n`/`--name` を使ってください:
 
 ```shell
-deno install --allow-net --allow-read -n serve https://deno.land/std@$STD_VERSION/http/file_server.ts
+deno install --allow-net --allow-read -n serve https://deno.land/std/http/file_server.ts
 ```
 
 <!--
@@ -57,7 +57,7 @@ To change the installation root, use `--root`:
 インストールルートを変えるには `--root` を使います。
 
 ```shell
-deno install --allow-net --allow-read --root /usr/local https://deno.land/std@$STD_VERSION/http/file_server.ts
+deno install --allow-net --allow-read --root /usr/local https://deno.land/std/http/file_server.ts
 ```
 
 <!--
@@ -85,7 +85,7 @@ time.
 インストール時にスクリプトを実行するためのパーミッションを指定しなければいけません。
 
 ```shell
-deno install --allow-net --allow-read https://deno.land/std@$STD_VERSION/http/file_server.ts -p 8080
+deno install --allow-net --allow-read https://deno.land/std/http/file_server.ts -p 8080
 ```
 
 <!--

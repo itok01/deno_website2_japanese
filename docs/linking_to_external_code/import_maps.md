@@ -34,7 +34,7 @@ Denoは [import maps](https://github.com/WICG/import-maps) をサポートして
 ```js
 {
    "imports": {
-      "fmt/": "https://deno.land/std@$STD_VERSION/fmt/"
+      "fmt/": "https://deno.land/std@0.55.0/fmt/"
    }
 }
 ```
