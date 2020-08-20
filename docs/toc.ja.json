@@ -36,10 +36,7 @@
     "name": "標準ライブラリ"
   },
   "testing": {
-    "name": "テスト",
-    "children": {
-      "assertions": "アサーション"
-    }
+    "name": "テスト"
   },
   "tools": {
     "name": "ツール",
