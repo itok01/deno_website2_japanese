@@ -100,12 +100,9 @@ run `apt install libglib2.0-dev`.)
 Linuxユーザーはglib-2.0開発環境ファイルも必要です。(Ubuntuでは `apt install libglib2.0-dev` を実行してください。)
 
 <!--
-Mac users must have Command Line Tools installed.
-([XCode](https://developer.apple.com/xcode/) already includes CLT. Run
-`xcode-select --install` to install it without XCode.)
+Mac users must have [XCode](https://developer.apple.com/xcode/) installed.
 -->
-Macユーザーはコマンドラインツールが必要です。([XCode](https://developer.apple.com/xcode/) はCLTを含んでいます。
-XCodeをインストールしない場合 `xcode-select --install` を実行してください。)
+Macユーザーは [XCode](https://developer.apple.com/xcode/) のインストールが必要です。
 
 <!-- For Windows users: -->
 Windowsユーザー:

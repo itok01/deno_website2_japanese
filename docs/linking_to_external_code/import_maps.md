@@ -53,35 +53,3 @@ console.log(red("hello world"));
 ```shell
 $ deno run --importmap=import_map.json --unstable color.ts
 ```
-
-<!-- To use staring directory for absolute imports: -->
-絶対的インポートに開始ディレクトリを使う:
-
-```json
-// import_map.json
-
-{
-  "imports": {
-    "/": "./"
-  }
-}
-```
-
-```ts
-// main.ts
-
-import { MyUtil } from "/util.ts";
-```
-
-<!-- You may map a different directory: (eg. src) -->
-別のディレクトリをマップすることも出来ます: (例、src)
-
-```json
-// import_map.json
-
-{
-  "imports": {
-    "/": "./src"
-  }
-}
-```

@@ -7,8 +7,8 @@
 <!-- - Please don't make [the benchmarks](https://deno.land/benchmarks.html) worse. -->
 - [ベンチマーク](https://deno-ja.vercel.app/benchmarks.html) を悪くしないでください。
 
-<!-- - Ask for help in the [community chat room](https://discord.gg/deno). -->
-- [コミュニティチャットルーム](https://discord.gg/deno) で助けを求めてください。
+<!-- - Ask for help in the [community chat room](https://discord.gg/TGMHGv6). -->
+- [コミュニティチャットルーム](https://discord.gg/TGMHGv6) で助けを求めてください。
 
 <!--
 - If you are going to work on an issue, mention so in the issue comments
