@@ -4,8 +4,8 @@
 <!-- - Read the [style guide](./contributing/style_guide.md). -->
 - [スタイルガイド](./contributing/style_guide.md) を読んでください。
 
-<!-- - Please don't make [the benchmarks](https://deno.land/benchmarks) worse. -->
-- [ベンチマーク](https://deno-ja.vercel.app/benchmarks) を悪くしないでください。
+<!-- - Please don't make [the benchmarks](https://deno.land/benchmarks.html) worse. -->
+- [ベンチマーク](https://deno-ja.vercel.app/benchmarks.html) を悪くしないでください。
 
 <!-- - Ask for help in the [community chat room](https://discord.gg/deno). -->
 - [コミュニティチャットルーム](https://discord.gg/deno) で助けを求めてください。
