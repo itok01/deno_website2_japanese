@@ -217,26 +217,8 @@ option.
 -->
 `--filter` オプションを使うことで個別にあるいはグループでテストをする事ができます。
 
-<!-- The filter flags accept a string or a pattern as value. -->
-フィルターフラグは string やパターンを値として受け取ることが出来ます。
-
-<!-- Assuming the following tests: -->
-次のテストを想定:
-
-```ts
-Deno.test({ name: "my-test", fn: myTest });
-Deno.test({ name: "test-1", fn: test1 });
-Deno.test({ name: "test2", fn: test2 });
-```
-
-<!--
-This command will run all of these tests because they all contain the word
-"test".
--->
-これらはすべて "test" の単語を含んでいるので、このコマンドはすべてのテストを実行します。
-
 ```shell
-deno test --filter "test" tests/
+deno test --filter "hello world" tests/
 ```
 
 <!--
@@ -250,10 +232,10 @@ deno test --filter "/test-*\d/" tests/
 ```
 
 <!--
-_To let Deno know that you want to use a pattern, wrap your filter with
-forward-slashes like the JavaScript syntactic sugar for a REGEX._
+This command will run any test which contains the string "hello world" in its
+test name for tests found within files in the `tests/` directory.
 -->
-_パターンを使いたいことをDenoに知らせるには、JavaScriptのREGEX構文のようにフィルターをフォーワードスラッシュで囲んでください。_
+このコマンドは `tests/` ディレクトリのなかのテストのテスト名に文字列"hello world"を含んている全てのテストを実行します。
 
 <!-- ### Test definition filtering -->
 ### 定義フィルタリングのテスト
