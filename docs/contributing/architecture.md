@@ -26,10 +26,11 @@ are.
 リソース(別名 `rid`)はファイル記述子のDeno版である。これらは開いているファイル、ソケット、その他の概念を参照するために使用される整数値です。テストでは開いているリソースの数を数えることが出来ると良いでしょう。
 
 ```ts
-console.log(Deno.resources());
+const { resources, close } = Deno;
+console.log(resources());console.log(Deno.resources());
 // { 0: "stdin", 1: "stdout", 2: "stderr" }
-Deno.close(0);
-console.log(Deno.resources());
+close(0);
+console.log(resources());
 // { 1: "stdout", 2: "stderr" }
 ```
 

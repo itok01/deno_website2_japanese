@@ -16,46 +16,15 @@ Denoはコアチームによって監査されDenoで動くことが保証され
 <!--
 Standard library is not yet stable and therefore it is versioned differently
 than Deno. For latest release consult https://deno.land/std/ or
-https://deno.land/std/version.ts. The standard library is released each time
-Deno is released.
+https://deno.land/std/version.ts.
 -->
-標準ライブラリはまだ安定版でなくそのためDenoのバージョンと違います。最新のリリースは https://deno.land/std/ もしくは https://deno.land/std/version.ts にあります。標準ライブラリはDenoリリースと同時期にリリースされます。
+標準ライブラリはまだ安定版でなくそのためDenoのバージョンと違います。最新のリリースは https://deno.land/std/ もしくは https://deno.land/std/version.ts にあります。
 
 <!--
 We strongly suggest to always use imports with pinned version of standard
-library to avoid unintended changes. For example, rather than linking to the
-master branch of code, which may change at any time, potentially causing
-compilation errors or unexpected behavior:
+library to avoid unintended changes.
 -->
-意図しない変更を回避するために標準ライブラリは固定されたバージョンをつねにインポートすることを強くおすすめします。例えば、いつでも変更される可能性があり、コンパイルエラーや予期できない動作を起こす可能性があるマスターブランチのコードにリンクするより:
-
-<!--
-```typescript
-// imports from master, this should be avoided
-import { copy } from "https://deno.land/std/fs/copy.ts";
-```
--->
-```typescript
-// マスターからインポート、これは避けるべきです
-import { copy } from "https://deno.land/std/fs/copy.ts";
-```
-
-<!--
-instead, used a version of the std library which is immutable and will not
-change:
--->
-それより、変更されないイミュータブルの std ライブラリのバージョンを使ってください:
-
-<!--
-```typescript
-// imports from v0.50.0 of std, never changes
-import { copy } from "https://deno.land/std@0.50.0/fs/copy.ts";
-```
---->
-```typescript
-// 変更されない、v0.50.0 の std をインポート
-import { copy } from "https://deno.land/std@0.50.0/fs/copy.ts";
-```
+意図しない変更を回避するために標準ライブラリは固定されたバージョンをつねにインポートすることを強くおすすめします。
 
 <!-- ## Troubleshooting -->
 ## トラブルシューティング
@@ -65,8 +34,7 @@ import { copy } from "https://deno.land/std@0.50.0/fs/copy.ts";
 
 <!--
 Trying to run such modules without `--unstable` CLI flag ends up with a lot of
-TypeScript errors suggesting that some APIs in the `Deno` namespace do not
-exist:
+TypeScript errors suggesting that some APIs on `Deno` namespace do not exist:
 -->
 これらのモジュールを `--unstable` フラグなしで実行しようとすると `Deno` 名前空間にあるいくつかのAPIが存在しないことを示唆する多くのTypeScriptはエラーが発生します。
 
@@ -109,7 +77,6 @@ declaration.
 APIが不安定なエラーを生成していることを確認するには [`lib.deno.unstable.d.ts`](https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts) を確認してください。
 
 <!--
-This problem should be fixed in the near future. Feel free to omit the flag if
-the particular modules you depend on compile successfully without it.
+This problem should be fixed in the near future.
 -->
-この問題は近いうちに解決されるはずです。依存している特定のモジュールがこのフラグなしで正常にコンパイルされている場合は、このフラグを省略しても構いません。
+この問題は近いうちに解決されるはずです。

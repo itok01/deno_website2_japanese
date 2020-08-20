@@ -33,19 +33,19 @@ deno run --allow-read mod.ts
 - **--allow-hrtime** Allow high resolution time measurement. High resolution
   time can be used in timing attacks and fingerprinting.
 - **--allow-net=\<allow-net\>** Allow network access. You can specify an
-  optional, comma separated list of domains to provide a allow-list of allowed
+  optional, comma separated list of domains to provide a whitelist of allowed
   domains.
 - **--allow-plugin** Allow loading plugins. Please note that --allow-plugin is
   an unstable feature.
 - **--allow-read=\<allow-read\>** Allow file system read access. You can specify
   an optional, comma separated list of directories or files to provide a
-  allow-list of allowed file system access.
+  whitelist of allowed file system access.
 - **--allow-run** Allow running subprocesses. Be aware that subprocesses are not
   run in a sandbox and therefore do not have the same security restrictions as
   the deno process. Therefore, use with caution.
 - **--allow-write=\<allow-write\>** Allow file system write access. You can
   specify an optional, comma separated list of directories or files to provide a
-  allow-list of allowed file system access.
+  whitelist of allowed file system access.
 -->
 - **-A, --allow-all** すべてのパーミッションを許可。すべてのセキュリティを無効化。
 - **--allow-env** 環境変数を取得したり設定したりするためのアクセスを許可。
@@ -56,17 +56,17 @@ deno run --allow-read mod.ts
 - **--allow-run** サブプロセスの実行を許可。サブプロセスはサンドボックスで実行されるわけではないことに注意してください、そのため、denoのプロセスと同じセキュリティ制限を持ちません。そのため注意してください。
 - **--allow-write=\<allow-write\>** ファイルシステムへの書き込みを許可。任意でディレクトリまたはファイルのカンマ区切りのリストを指定することで、ファイルシステムへの許可をするリストを提供する事ができます。
 
-<!-- ### Permissions allow-list -->
+<!-- ### Permissions whitelist -->
 ### パーミッション許可リスト
 
 <!--
 Deno also allows you to control the granularity of some permissions with
-allow-lists.
+whitelists.
 -->
 Denoは許可リストを用いてパーミッションの粒度を制御することが出来ます。
 
 <!--
-This example restricts file system access by allow-listing only the `/usr`
+This example restricts file system access by whitelisting only the `/usr`
 directory, however the execution fails as the process was attempting to access a
 file in the `/etc` directory:
 -->
@@ -80,7 +80,7 @@ error: Uncaught PermissionDenied: read access to "/etc/passwd", run again with t
     ...
 ```
 
-<!-- Try it out again with the correct permissions by allow-listing `/etc` instead: -->
+<!-- Try it out again with the correct permissions by whitelisting `/etc` instead: -->
 許可リストに `/etc` を指定し正しいパーミッションでもう一度試してみてください:
 
 ```shell
@@ -99,7 +99,7 @@ _fetch.ts_:
 const result = await fetch("https://deno.land/");
 ```
 
-<!-- This is an example on how to allow-list hosts/urls: -->
+<!-- This is an example on how to whitelist hosts/urls: -->
 これはホスト/urlの許可リストの例です:
 
 ```shell

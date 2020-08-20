@@ -1,4 +1,4 @@
-<!-- ## Set up your environment -->
+<!-- ## Setup your environment -->
 ## 環境構築
 
 <!--
@@ -46,20 +46,12 @@ redirect it to an appropriate file.
 - powershell
 - elvish
 
-<!-- Example (bash): -->
-例 (bash)
+<!-- Example: -->
+例:
 
 ```shell
 deno completions bash > /usr/local/etc/bash_completion.d/deno.bash
 source /usr/local/etc/bash_completion.d/deno.bash
-```
-
-<!-- Example (zsh): -->
-例 (zsh)
-
-```shell
-mkdir ~/.oh-my-zsh/custom/plugins/deno
-deno completions zsh > ~/.oh-my-zsh/custom/plugins/deno/_deno
 ```
 
 <!-- After this add `deno` plugin under plugins tag in `~/.zshrc` file. -->
