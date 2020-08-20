@@ -7,7 +7,7 @@
 -->
 > このプログラムは不安定版のDenoの機能を使います。詳しくは [不安定版の機能](../runtime/stability.md) を参照してください。
 
-[API Reference](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d.ts#Deno.signal)
+[API Reference](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/js/lib.deno.unstable.d.ts#Deno.signal)
 
 <!-- You can use `Deno.signal()` function for handling OS signals. -->
 OSシグナルを取り扱うために `Deno.signal()` を使うことが出来ます。

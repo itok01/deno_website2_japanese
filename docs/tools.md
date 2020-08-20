@@ -7,6 +7,9 @@ and TypeScript:
 -->
 DenoはJavaScriptとTypeScriptを使うときに便利なビルトインツールを提供します:
 
+<!-- prettier-ignore-start -->
+<!-- prettier incorrectly moves the coming soon links to new lines -->
+
 <!--
 - [bundler (`deno bundle`)](./tools/bundler.md)
 - [debugger (`--inspect, --inspect-brk`)](./tools/debugger.md)
@@ -16,6 +19,9 @@ DenoはJavaScriptとTypeScriptを使うときに便利なビルトインツー�
 - [test runner (`deno test`)](./testing.md)
 - [linter (`deno lint`)](./tools/linter.md)
 -->
+
+<!-- prettier-ignore-end -->
+
 - [バンドラー (`deno bundle`)](./tools/bundler.md)
 - [デバッガー (`--inspect、--inspect-brk`)](./tools/debugger.md)
 - [依存インスペクター (`deno info`)](./tools/dependency_inspector.md)

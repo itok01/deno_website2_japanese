@@ -23,9 +23,8 @@ V8、Rust、Tokioを使って作られています。
 - Has built-in utilities like a dependency inspector (`deno info`) and a code
   formatter (`deno fmt`).
 - Has
-  [a set of reviewed (audited) standard
-  modules](https://github.com/denoland/deno/tree/master/std) that are guaranteed
-  to work with Deno.
+  [a set of reviewed (audited) standard modules](https://github.com/denoland/deno/tree/master/std)
+  that are guaranteed to work with Deno.
 - Scripts can be bundled into a single JavaScript file.
 -->
 - デフォルトで安全。ファイル、ネットワーク、環境へのアクセスなし(明示的に有効にしない限り)。

@@ -103,8 +103,6 @@ idiom to specify the entry point in an executable script.
 <!-- Example: -->
 例:
 
-<!-- dprint-ignore -->
-
 <!--
 ```ts
 // https://example.com/awesome/cli.ts

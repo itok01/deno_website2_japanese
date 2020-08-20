@@ -55,7 +55,7 @@ deno bundle --help
 
 <!--
 Deno can grab the scripts from multiple sources, a filename, a url, and '-' to
-read the file from stdin. The last is useful for integration with other
+read the file from stdin. The later is useful for integration with other
 applications.
 -->
 Denoはファイル、url、標準入力から '-' を用いるなど様々なソースからスクリプトを取得することが出来ます。標準入力は他のアプリケーションとの統合に便利です。

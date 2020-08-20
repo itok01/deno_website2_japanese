@@ -33,6 +33,8 @@ cat file.ts | deno fmt -
 <!-- Ignore formatting code by preceding it with a `// deno-fmt-ignore` comment: -->
 `// deno-fmt-ignore` コメントをつけることでコードのフォーマットを無視することが出来ます:
 
+<!-- prettier-ignore-start -->
+
 ```ts
 // deno-fmt-ignore
 export const identity = [
@@ -41,6 +43,8 @@ export const identity = [
     0, 0, 1,
 ];
 ```
+
+<!-- prettier-ignore-end -->
 
 <!--
 Or ignore an entire file by adding a `// deno-fmt-ignore-file` comment at the
