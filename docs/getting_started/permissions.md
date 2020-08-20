@@ -4,14 +4,14 @@
 <!--
 Deno is secure by default. Therefore, unless you specifically enable it, a deno
 module has no file, network, or environment access for example. Access to
-security-sensitive areas or functions requires the use of permissions to be
+security sensitive areas or functions requires the use of permissions to be
 granted to a deno process on the command line.
 -->
 Denoはデフォルトで安全です。そのため、明確に有効にしない限り、Denoモジュールはファイル、ネットワーク、環境などへのアクセスが有りません。セキュリティに関わるエリアや機能へのアクセスはコマンドラインでdenoのプロセスを生成するときにパーミッションの使用を要求します。
 
 <!--
 For the following example, `mod.ts` has been granted read-only access to the
-file system. It cannot write to it, or perform any other security-sensitive
+file system. It cannot write to it, or perform any other security sensitive
 functions.
 -->
 次の例では、`mod.ts` がファイルシステムへ読み込みのみのアクセスを得ます。書き込みや他のセキュリティに関わる機能はできません。
@@ -30,21 +30,21 @@ deno run --allow-read mod.ts
 - **-A, --allow-all** Allow all permissions. This disables all security.
 - **--allow-env** Allow environment access for things like getting and setting
   of environment variables.
-- **--allow-hrtime** Allow high-resolution time measurement. High-resolution
+- **--allow-hrtime** Allow high resolution time measurement. High resolution
   time can be used in timing attacks and fingerprinting.
 - **--allow-net=\<allow-net\>** Allow network access. You can specify an
-  optional, comma-separated list of domains to provide an allow-list of allowed
+  optional, comma separated list of domains to provide a allow-list of allowed
   domains.
 - **--allow-plugin** Allow loading plugins. Please note that --allow-plugin is
   an unstable feature.
 - **--allow-read=\<allow-read\>** Allow file system read access. You can specify
-  an optional, comma-separated list of directories or files to provide a
+  an optional, comma separated list of directories or files to provide a
   allow-list of allowed file system access.
 - **--allow-run** Allow running subprocesses. Be aware that subprocesses are not
   run in a sandbox and therefore do not have the same security restrictions as
   the deno process. Therefore, use with caution.
 - **--allow-write=\<allow-write\>** Allow file system write access. You can
-  specify an optional, comma-separated list of directories or files to provide a
+  specify an optional, comma separated list of directories or files to provide a
   allow-list of allowed file system access.
 -->
 - **-A, --allow-all** すべてのパーミッションを許可。すべてのセキュリティを無効化。
@@ -99,7 +99,7 @@ _fetch.ts_:
 const result = await fetch("https://deno.land/");
 ```
 
-<!-- This is an example of how to allow-list hosts/urls: -->
+<!-- This is an example on how to allow-list hosts/urls: -->
 これはホスト/urlの許可リストの例です:
 
 ```shell
