@@ -205,8 +205,8 @@ be missing or buggy:
 Devtoolsサポートはまだ未熟です。一部の機能はなかったりバグが多いです。
 
 <!--
-- autocomplete in Devtools' console causes the Deno process to exit
-- profiling and memory dumps might not work correctly
+- autocomplete in Devtools' console causes the Deno process to exit.
+- profiling and memory dumps might not work correctly.
 -->
-- Devtoolsでの自動補完はDenoプロセスの終了を引き起こします
-- プロファイリングとメモリダンプは正しく動かない可能性があります
+- Devtoolsでの自動補完はDenoプロセスの終了を引き起こします。
+- プロファイリングとメモリダンプは正しく動かない可能性があります。

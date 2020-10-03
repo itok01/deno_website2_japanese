@@ -21,26 +21,26 @@ The detailed documentation for implemented Web APIs can be found on
 [doc.deno.land](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.shared_globals.d.ts).
 Additionally, a full list of the Web APIs which Deno implements is also
 available
-[in the repository](https://github.com/denoland/deno/blob/master/cli/rt/README.md).
+[in the repository](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/rt/README.md).
 -->
 Web APIの実装の詳しいドキュメントは [doc.deno.land](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.shared_globals.d.ts) 。
-また、Denoが実装しているWeb APIの一覧は [in the repository](https://github.com/denoland/deno/blob/master/cli/rt/README.md) で利用可能です。
+また、Denoが実装しているWeb APIの一覧は [in the repository](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/rt/README.md) で利用可能です。
 
 <!--
 The TypeScript definitions for the implemented web APIs can be found in the
-[`lib.deno.shared_globals.d.ts`](https://github.com/denoland/deno/blob/master/cli/dts/lib.deno.shared_globals.d.ts)
+[`lib.deno.shared_globals.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.shared_globals.d.ts)
 and
-[`lib.deno.window.d.ts`](https://github.com/denoland/deno/blob/master/cli/dts/lib.deno.window.d.ts)
+[`lib.deno.window.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.window.d.ts)
 files.
 -->
-Web APIのTypeScriptの定義は [`lib.deno.shared_globals.d.ts`](https://github.com/denoland/deno/blob/master/cli/dts/lib.deno.shared_globals.d.ts) と [`lib.deno.window.d.ts`](https://github.com/denoland/deno/blob/master/cli/dts/lib.deno.window.d.ts) ファイルにあります。
+Web APIのTypeScriptの定義は [`lib.deno.shared_globals.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.shared_globals.d.ts) と [`lib.deno.window.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.window.d.ts) ファイルにあります。
 
 <!--
 Definitions that are specific to workers can be found in the
-[`lib.deno.worker.d.ts`](https://github.com/denoland/deno/blob/master/cli/dts/lib.deno.worker.d.ts)
+[`lib.deno.worker.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.worker.d.ts)
 file.
 -->
-ワーカー特有の定義は [`lib.deno.worker.d.ts`](https://github.com/denoland/deno/blob/master/cli/dts/lib.deno.worker.d.ts) にあります。
+ワーカー特有の定義は [`lib.deno.worker.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.worker.d.ts) にあります。
 
 <!-- ## `Deno` global -->
 ## `Deno` グローバル
@@ -55,10 +55,10 @@ Web標準でないすべてのAPIはグローバルである `Deno` 名前空間
 
 <!--
 The TypeScript definitions for the Deno namespaces can be found in the
-[`lib.deno.ns.d.ts`](https://github.com/denoland/deno/blob/master/cli/dts/lib.deno.ns.d.ts)
+[`lib.deno.ns.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.ns.d.ts)
 file.
 -->
-Deno名前空間のTypeScriptの定義は [`lib.deno.ns.d.ts`](https://github.com/denoland/deno/blob/master/cli/dts/lib.deno.ns.d.ts) ファイルにあります。
+Deno名前空間のTypeScriptの定義は [`lib.deno.ns.d.ts`](https://github.com/denoland/deno/blob/$CLI_VERSION/cli/dts/lib.deno.ns.d.ts) ファイルにあります。
 
 <!--
 The documentation for all of the Deno specific APIs can be found on

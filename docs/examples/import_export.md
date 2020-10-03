@@ -8,14 +8,14 @@
 - [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
   allows you to include and use modules held elsewhere, on your local file
   system or remotely.
-- Imports are URLs or file system paths
+- Imports are URLs or file system paths.
 - [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
   allows you to specify which parts of your module are accessible to users who
-  import your module
+  import your module.
 -->
-- [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) はローカルファイルシステムやリモートにあるモジュールをインクルードし使用することをできるようにします
-- importはURLやファイルパスを使います
-- [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) はそのモジュールをimportするユーザーに対し、モジュールのどの部分をアクセス可能にするか指定することができます
+- [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) はローカルファイルシステムやリモートにあるモジュールをインクルードし使用することをできるようにします。
+- importはURLやファイルパスを使います。
+- [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) はそのモジュールをimportするユーザーに対し、モジュールのどの部分をアクセス可能にするか指定することができます。
 
 <!-- ## Overview -->
 ## 概要
@@ -34,10 +34,7 @@ handling of `index.js`.
 ブラウザライクなモジュール解決を採用しており、ファイル名は完全に指定しなければいけません。拡張子を省略することはできませんし、`index.js` の特別な扱いもありません。
 
 ```js
-import {
-  add,
-  multiply,
-} from "./arithmetic.ts";
+import { add, multiply } from "./arithmetic.ts";
 ```
 
 <!--

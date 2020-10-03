@@ -26,8 +26,8 @@ argument to a `--reload` flag.
 -->
 いくつかのモジュールだけ更新したいときがあります。そのためには `--reload` フラグに引数を渡すことでコントロール出来ます。
 
-<!-- To reload all \$STD_VERSION standard modules -->
-すべての\$STD_VERSION標準モジュールを再ロード
+<!-- To reload all \$STD_VERSION standard modules: -->
+すべての\$STD_VERSION標準モジュールを再ロード:
 
 ```ts
 deno cache --reload=https://deno.land/std@$STD_VERSION my_module.ts
@@ -35,9 +35,9 @@ deno cache --reload=https://deno.land/std@$STD_VERSION my_module.ts
 
 <!--
 To reload specific modules (in this example - colors and file system copy) use a
-comma to separate URLs
+comma to separate URLs.
 -->
-特定のモジュール(この例ではcolorsとファイルシステムcopy)を再ロードするにはURLを分けるのにカンマを使ってください
+特定のモジュール(この例ではcolorsとファイルシステムcopy)を再ロードするにはURLを分けるのにカンマを使ってください。
 
 ```ts
 deno cache --reload=https://deno.land/std@$STD_VERSION/fs/copy.ts,https://deno.land/std@$STD_VERSION/fmt/colors.ts my_module.ts

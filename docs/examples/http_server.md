@@ -6,9 +6,9 @@
 
 <!--
 - Use the std library [http module](https://deno.land/std@$STD_VERSION/http) to
-  run your own web server
+  run your own web server.
 -->
-- stdライブラリ [http module](https://deno.land/std@$STD_VERSION/http) を使用し、webサーバーを実行します
+- stdライブラリ [http module](https://deno.land/std@$STD_VERSION/http) を使用し、webサーバーを実行します。
 
 <!-- ## Overview -->
 ## 概要
@@ -22,8 +22,8 @@ over the response status, request headers and more.
 <!-- ## Sample web server -->
 ## 簡単なwebサーバー
 
-<!-- In this example, the user-agent of the client is returned to the client -->
-この例では、クライアントのuser-agentがクライアントに返されます。
+<!-- In this example, the user-agent of the client is returned to the client: -->
+この例では、クライアントのuser-agentがクライアントに返されます:
 
 ```typescript
 /** 

@@ -11,16 +11,16 @@
 ## 概念
 
 <!--
-- Use the `--unstable` flag to access new or unstable features in Deno
+- Use the `--unstable` flag to access new or unstable features in Deno.
 - [Deno.signal](https://doc.deno.land/builtin/unstable#Deno.signal) can be used
-  to capture and monitor OS signals
+  to capture and monitor OS signals.
 - Use the `dispose()` function of the Deno.signal
   [SignalStream](https://doc.deno.land/builtin/unstable#Deno.SignalStream) to
-  stop watching the signal
+  stop watching the signal.
 -->
-- Denoの新しい機能や不安定な機能にアクセスするには `--unstable` フラグを使用してください
-- [Deno.signal](https://doc.deno.land/builtin/unstable#Deno.signal) はOSシグナルを取得したり監視したりするのに使用されます
-- シグナルの監視を停止するにはDeno.signal [SignalStream](https://doc.deno.land/builtin/unstable#Deno.SignalStream) の `dispose()` を使用してください
+- Denoの新しい機能や不安定な機能にアクセスするには `--unstable` フラグを使用してください。
+- [Deno.signal](https://doc.deno.land/builtin/unstable#Deno.signal) はOSシグナルを取得したり監視したりするのに使用されます。
+- シグナルの監視を停止するにはDeno.signal [SignalStream](https://doc.deno.land/builtin/unstable#Deno.SignalStream) の `dispose()` を使用してください。
 
 <!-- ## Async iterator example -->
 ## 非同期イテレーターの例

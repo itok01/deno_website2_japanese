@@ -65,7 +65,7 @@ have been historically written with bash or python.
 
 <!--
 - Only ship a single executable (`deno`).
-- Provide Secure Defaults
+- Provide Secure Defaults.
   - Unless specifically allowed, scripts can't access files, the environment, or
     the network.
 - Browser compatible: The subset of Deno programs which are written completely
@@ -74,10 +74,10 @@ have been historically written with bash or python.
 - Provide built-in tooling like unit testing, code formatting, and linting to
   improve developer experience.
 - Does not leak V8 concepts into user land.
-- Be able to serve HTTP efficiently
+- Be able to serve HTTP efficiently.
 -->
 - 1つの実行ファイル(`deno`)で実行可能。
-- 安全な初期設定の提供
+- 安全な初期設定の提供。
   - 明確に許可しない限りスクリプトはファイル、環境、ネットワークにアクセスできません。
 - ブラウザ互換: JavaScriptだけで書かれグローバル名前空間 `Deno` を使わないDenoのサブセットのプログラム(またはこれのための機能テスト)は、モダンなwebブラウザで変更なしに実行できるようにすべきです。
 - デベロッパーエクスペリエンスを向上させるためにユニットテストやコードフォーマット、リンティングなどのビルトインツールを提供。
@@ -88,8 +88,8 @@ have been historically written with bash or python.
 ## Node.jsとの比較
 
 <!--
-- Deno does not use `npm`
-  - It uses modules referenced as URLs or file paths
+- Deno does not use `npm`.
+  - It uses modules referenced as URLs or file paths.
 - Deno does not use `package.json` in its module resolution algorithm.
 - All async actions in Deno return a promise. Thus Deno provides different APIs
   than Node.
@@ -98,8 +98,8 @@ have been historically written with bash or python.
 - Uses "ES Modules" and does not support `require()`. Third party modules are
   imported via URLs:
 -->
-- Denoは`npm`を使いません
-  - モジュールの参照にはURLやファイルパスを使います
+- Denoは`npm`を使いません。
+  - モジュールの参照にはURLやファイルパスを使います。
 - Denoはモジュールの解決のために`package.json`を使いません。
 - Denoのすべての非同期の動作はプロミスを返します。よって、DenoはNodeと違うAPIを提供します。
 - Denoはファイル、ネットワーク、環境へのアクセスには明示的なパーミッションを要求します。

@@ -6,11 +6,11 @@
 
 <!--
 - Use [Deno.watchFs](https://doc.deno.land/builtin/stable#Deno.watchFs) to watch
-  for file system events
-- Results may vary between operating systems
+  for file system events.
+- Results may vary between operating systems.
 -->
-- [Deno.watchFs](https://doc.deno.land/builtin/stable#Deno.watchFs) を使用し、ファイルシステムイベントを監視します
-- 結果はオペレーティングシステムによって異なる場合があります
+- [Deno.watchFs](https://doc.deno.land/builtin/stable#Deno.watchFs) を使用し、ファイルシステムイベントを監視します。
+- 結果はオペレーティングシステムによって異なる場合があります。
 
 <!-- ## Example -->
 ## 例

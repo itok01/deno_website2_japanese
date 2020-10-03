@@ -9,17 +9,17 @@
   [Deno.readTextFile](https://doc.deno.land/builtin/stable#Deno.readTextFile)
   and
   [Deno.writeTextFile](https://doc.deno.land/builtin/stable#Deno.writeTextFile)
-  asynchronous functions for reading and writing entire text files
+  asynchronous functions for reading and writing entire text files.
 - Like many of Deno's APIs, synchronous alternatives are also available. See
   [Deno.readTextFileSync](https://doc.deno.land/builtin/stable#Deno.readTextFileSync)
   and
-  [Deno.writeTextFileSync](https://doc.deno.land/builtin/stable#Deno.writeTextFileSync)
+  [Deno.writeTextFileSync](https://doc.deno.land/builtin/stable#Deno.writeTextFileSync).
 - Use `--allow-read` and `--allow-write` permissions to gain access to the file
-  system
+  system.
 -->
-- テキストファイルの読み書きのために、DenoのランタイムAPIは [Deno.readTextFile](https://doc.deno.land/builtin/stable#Deno.readTextFile) と [Deno.writeTextFile](https://doc.deno.land/builtin/stable#Deno.writeTextFile) 非同期関数を提供します
-- 多くのDENOのAPIと同じように、同等の同期関数も利用可能です。[Deno.readTextFileSync](https://doc.deno.land/builtin/stable#Deno.readTextFileSync) と [Deno.writeTextFileSync](https://doc.deno.land/builtin/stable#Deno.writeTextFileSync) を見てください
-- ファイルシステムへのアクセスには `--allow-read` と `--allow-write` パーミッションが必要です
+- テキストファイルの読み書きのために、DenoのランタイムAPIは [Deno.readTextFile](https://doc.deno.land/builtin/stable#Deno.readTextFile) と [Deno.writeTextFile](https://doc.deno.land/builtin/stable#Deno.writeTextFile) 非同期関数を提供します。
+- 多くのDENOのAPIと同じように、同等の同期関数も利用可能です。[Deno.readTextFileSync](https://doc.deno.land/builtin/stable#Deno.readTextFileSync) と [Deno.writeTextFileSync](https://doc.deno.land/builtin/stable#Deno.writeTextFileSync) を見てください。
+- ファイルシステムへのアクセスには `--allow-read` と `--allow-write` パーミッションが必要です。
 
 <!-- ## Overview -->
 ## 概要

@@ -5,21 +5,21 @@
 
 <!--
 - [import.meta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
-  can provide information on the context of the module
+  can provide information on the context of the module.
 - The boolean
   [import.meta.main](https://doc.deno.land/builtin/stable#ImportMeta) will let
-  you know if the current module is the program entry point
+  you know if the current module is the program entry point.
 - The string [import.meta.url](https://doc.deno.land/builtin/stable#ImportMeta)
-  will give you the URL of the current module
+  will give you the URL of the current module.
 - The string
   [Deno.mainModule](https://doc.deno.land/builtin/stable#Deno.mainModule) will
   give you the URL of the main module entry point, i.e. the module invoked by
-  the deno runtime
+  the deno runtime.
 -->
-- [import.meta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta) はモジュールのコンテクストの情報を提供します
-- ブーリアン [import.meta.main](https://doc.deno.land/builtin/stable#ImportMeta) は現在のモジュールがエントリーポイントかどうか教えてくれます
-- 文字列 [import.meta.url](https://doc.deno.land/builtin/stable#ImportMeta) は現在のモジュールのURLを教えてくれます
-- 文字列 [Deno.mainModule](https://doc.deno.land/builtin/stable#Deno.mainModule) はメインモジュールのエントリーポイントのURLを教えてくれます。すなわち、denoランタイムによって呼び出されるモジュールのURLです
+- [import.meta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta) はモジュールのコンテクストの情報を提供します。
+- ブーリアン [import.meta.main](https://doc.deno.land/builtin/stable#ImportMeta) は現在のモジュールがエントリーポイントかどうか教えてくれます。
+- 文字列 [import.meta.url](https://doc.deno.land/builtin/stable#ImportMeta) は現在のモジュールのURLを教えてくれます。
+- 文字列 [Deno.mainModule](https://doc.deno.land/builtin/stable#Deno.mainModule) はメインモジュールのエントリーポイントのURLを教えてくれます。すなわち、denoランタイムによって呼び出されるモジュールのURLです。
 
 <!-- ## Example -->
 ## 例
@@ -27,9 +27,9 @@
 <!--
 The example below uses two modules to show the difference between
 `import.meta.url`, `import.meta.main` and `Deno.mainModule`. In this example,
-`module_a.ts` is the main module entry point
+`module_a.ts` is the main module entry point:
 -->
-下記の例は `import.meta.url`、`import.meta.main`、`Deno.mainModule` の違いを示すために2つのモジュールを使用します。この例では `module_a.ts` がメインモジュールエントリーポイントです
+下記の例は `import.meta.url`、`import.meta.main`、`Deno.mainModule` の違いを示すために2つのモジュールを使用します。この例では `module_a.ts` がメインモジュールエントリーポイントです:
 
 ```ts
 /**

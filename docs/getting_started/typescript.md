@@ -42,7 +42,7 @@ To export a type in a different file use
 `import type` and `export type` where necessary by setting the `isolatedModules`
 TypeScript compiler option to `true`, and the `importsNotUsedAsValues` to
 `error`. You can see an example `tsconfig.json` with this option
-[in the standard library](https://github.com/denoland/deno/blob/master/std/tsconfig_test.json).
+[in the standard library](https://github.com/denoland/deno/blob/$CLI_VERSION/std/tsconfig_test.json).
 These settings will be enabled by default in the future. They are already the
 default in Deno 1.4 or above when using `--unstable`.
 -->
@@ -216,6 +216,7 @@ Denoで現在許可されている設定とそのデフォルト値は次のと�
     "generateCpuProfile": "profile.cpuprofile",
     "jsx": "react",
     "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
     "lib": [],
     "noFallthroughCasesInSwitch": false,
     "noImplicitAny": true,

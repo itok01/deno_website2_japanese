@@ -30,7 +30,7 @@ On the CLI, read permission for `/foo/bar` is represented as
 CLIでは `/foo/bar` の読み込みパーミッションは `--allow-read=/foo/bar` で表され。ランタイムJSでは次のように表されます。
 
 ```ts
-const desc = { name: "read", path: "/foo/bar" };
+const desc = { name: "read", path: "/foo/bar" } as const;
 ```
 
 <!-- Other examples: -->
@@ -39,36 +39,36 @@ const desc = { name: "read", path: "/foo/bar" };
 <!--
 ```ts
 // Global write permission.
-const desc1 = { name: "write" };
+const desc1 = { name: "write" } as const;
 
 // Write permission to `$PWD/foo/bar`.
-const desc2 = { name: "write", path: "foo/bar" };
+const desc2 = { name: "write", path: "foo/bar" } as const;
 
 // Global net permission.
-const desc3 = { name: "net" };
+const desc3 = { name: "net" } as const;
 
 // Net permission to 127.0.0.1:8000.
-const desc4 = { name: "net", url: "127.0.0.1:8000" };
+const desc4 = { name: "net", url: "127.0.0.1:8000" } as const;
 
 // High-resolution time permission.
-const desc5 = { name: "hrtime" };
+const desc5 = { name: "hrtime" } as const;
 ```
 -->
 ```ts
 // グローバル書き込みパーミッション。
-const desc1 = { name: "write" };
+const desc1 = { name: "write" } as const;
 
 // `$PWD/foo/bar` への書き込みパーミッション。
-const desc2 = { name: "write", path: "foo/bar" };
+const desc2 = { name: "write", path: "foo/bar" } as const;
 
 // グローバルネットパーミッション。
-const desc3 = { name: "net" };
+const desc3 = { name: "net" } as const;
 
 // 127.0.0.1:8000へのネットパーミッション。
-const desc4 = { name: "net", url: "127.0.0.1:8000" };
+const desc4 = { name: "net", url: "127.0.0.1:8000" } as const;
 
 // 高分解能時間パーミッション。
-const desc5 = { name: "hrtime" };
+const desc5 = { name: "hrtime" } as const;
 ```
 
 <!-- ### Query permissions -->
@@ -80,15 +80,15 @@ const desc5 = { name: "hrtime" };
 ```ts
 // deno run --unstable --allow-read=/foo main.ts
 
-const desc1 = { name: "read", path: "/foo" };
+const desc1 = { name: "read", path: "/foo" } as const;
 console.log(await Deno.permissions.query(desc1));
 // PermissionStatus { state: "granted" }
 
-const desc2 = { name: "read", path: "/foo/bar" };
+const desc2 = { name: "read", path: "/foo/bar" } as const;
 console.log(await Deno.permissions.query(desc2));
 // PermissionStatus { state: "granted" }
 
-const desc3 = { name: "read", path: "/bar" };
+const desc3 = { name: "read", path: "/bar" } as const;
 console.log(await Deno.permissions.query(desc3));
 // PermissionStatus { state: "prompt" }
 ```
@@ -134,23 +134,23 @@ _[stronger than](https://www.w3.org/TR/permissions/#ref-for-permissiondescriptor
 
 <!--
 ```ts
-const desc1 = { name: "write" };
+const desc1 = { name: "write" } as const;
 // is stronger than
-const desc2 = { name: "write", path: "/foo" };
+const desc2 = { name: "write", path: "/foo" } as const;
 
-const desc3 = { name: "net" };
+const desc3 = { name: "net" } as const;
 // is stronger than
-const desc4 = { name: "net", url: "127.0.0.1:8000" };
+const desc4 = { name: "net", url: "127.0.0.1:8000" } as const;
 ```
 -->
 ```ts
-const desc1 = { name: "write" };
+const desc1 = { name: "write" } as const;
 // 上記は以下より強いです
-const desc2 = { name: "write", path: "/foo" };
+const desc2 = { name: "write", path: "/foo" } as const;
 
-const desc3 = { name: "net" };
+const desc3 = { name: "net" } as const;
 // 上記は以下より強いです
-const desc4 = { name: "net", url: "127.0.0.1:8000" };
+const desc4 = { name: "net", url: "127.0.0.1:8000" } as const;
 ```
 
 <!-- ### Request permissions -->
@@ -162,13 +162,13 @@ const desc4 = { name: "net", url: "127.0.0.1:8000" };
 ```ts
 // deno run --unstable main.ts
 
-const desc1 = { name: "read", path: "/foo" };
+const desc1 = { name: "read", path: "/foo" } as const;
 const status1 = await Deno.permissions.request(desc1);
 // ⚠️ Deno requests read access to "/foo". Grant? [g/d (g = grant, d = deny)] g
 console.log(status1);
 // PermissionStatus { state: "granted" }
 
-const desc2 = { name: "read", path: "/bar" };
+const desc2 = { name: "read", path: "/bar" } as const;
 const status2 = await Deno.permissions.request(desc2);
 // ⚠️ Deno requests read access to "/bar". Grant? [g/d (g = grant, d = deny)] d
 console.log(status2);
@@ -201,7 +201,7 @@ requests.
 ```ts
 // deno run --unstable --allow-read=/foo main.ts
 
-const desc = { name: "read", path: "/foo" };
+const desc = { name: "read", path: "/foo" } as const;
 console.log(await Deno.permissions.revoke(desc));
 // PermissionStatus { state: "prompt" }
 ```
@@ -215,7 +215,7 @@ one granted on the CLI?
 ```ts
 // deno run --unstable --allow-read=/foo main.ts
 
-const desc = { name: "read", path: "/foo/bar" };
+const desc = { name: "read", path: "/foo/bar" } as const;
 console.log(await Deno.permissions.revoke(desc));
 // PermissionStatus { state: "granted" }
 ```
@@ -262,11 +262,11 @@ Denoのパーミッション取り消しアルゴリズムは引数パーミッ�
 ```ts
 // deno run --unstable --allow-read=/foo main.ts
 
-const desc = { name: "read", path: "/foo/bar" };
+const desc = { name: "read", path: "/foo/bar" } as const;
 console.log(await Deno.permissions.revoke(desc)); // Insufficient.
 // PermissionStatus { state: "granted" }
 
-const strongDesc = { name: "read", path: "/foo" };
+const strongDesc = { name: "read", path: "/foo" } as const;
 await Deno.permissions.revoke(strongDesc); // Good.
 
 console.log(await Deno.permissions.query(desc));
