@@ -62,7 +62,7 @@ problems.
 Each module should contain or be accompanied by tests for its public
 functionality.
 -->
-角モジュールはその公開機能のテストを含んでいるか、テストを伴っていなければいけません。
+各モジュールはその公開機能のテストを含んでいるか、テストを伴っていなければいけません。
 
 <!-- ## TODO Comments -->
 ## TODOコメント
