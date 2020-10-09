@@ -12,7 +12,7 @@
 # Run the whole suite:
 cargo test
 
-# Only test cli/js/:
+# Only test cli/tests/unit/:
 cargo test js_unit_tests
 ```
 -->
@@ -20,7 +20,7 @@ cargo test js_unit_tests
 # スイートすべてをテスト:
 cargo test
 
-# cli/jsのみをテスト:
+# cli/tests/unit/のみをテスト:
 cargo test js_unit_tests
 ```
 

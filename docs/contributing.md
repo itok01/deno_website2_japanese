@@ -16,6 +16,9 @@
 -->
 - issue で協力したい場合は、協力する前に _前に_ issue でメンションしてください。
 
+- If you are going to work on a new feature, create an issue and discuss with
+  other contributors _before_ you start working on the feature.
+
 <!--
 - Please be professional in the forums. We follow
   [Rust's code of conduct](https://www.rust-lang.org/policies/code-of-conduct)
@@ -39,17 +42,44 @@ Instructions on how to build from source can be found
 プルリクエストを提出する前に以下のことが終わっているか確かめてください:
 
 <!--
-1. That there is a related issue and it is referenced in the PR text.
-2. There are tests that cover the changes.
-3. Ensure `cargo test` passes.
-4. Format your code with `./tools/format.py`
-5. Make sure `./tools/lint.py` passes.
+1. Give the PR a descriptive title.
+
+Examples of good PR title:
+
+- fix(std/http): Fix race condition in server
+- docs(console): Update docstrings
+- feat(doc): Handle nested re-exports
+
+Examples of bad PR title:
+
+- fix #7123
+- update docs
+- fix bugs
+
+2. Ensure there is a related issue and it is referenced in the PR text.
+3. Ensure there are tests that cover the changes.
+4. Ensure `cargo test` passes.
+5. Ensure `./tools/format.py` passes without changing files.
+6. Ensure `./tools/lint.py` passes.
 -->
-1. 関係するissueがありPRテキストに参照されているかどうか。
-2. 変更をカバーするテストが存在するか。
-3. `cargo test` をパスするかどうか。
-4. `./tools/format.py` でフォーマットされているかどうか。
-5. `./tools/lint.py` をパスするかどうか。
+1. PRタイトルに説明を書き込んでください。
+   
+良いPRタイトルの例:
+
+- fix(std/http): Fix race condition in server
+- docs(console): Update docstrings
+- feat(doc): Handle nested re-exports
+
+悪いPRタイトルの例:
+
+- fix #7123
+- update docs
+- fix bugs
+
+2. 関係するissueがありPRテキストに参照されているかどうかを確かめてください。
+3. 変更をカバーするテストが存在するかを確かめてください。
+5. `./tools/format.py` をファイルの変更なくパスするかどうかを確かめてください。
+6. `./tools/lint.py` をパスするかどうかを確かめてください。
 
 <!-- ## Changes to `third_party` -->
 ## `third_party` への変更
@@ -120,5 +150,5 @@ export const FOO = "foo";
 export const FOO = "foo";
 ```
 
-<!-- Find more at https://jsdoc.app/ -->
+<!-- Find more at: https://jsdoc.app/ -->
 詳しくは https://jsdoc.app/ を参照してください
