@@ -26,28 +26,37 @@ headers. We only allow MIT, BSD, and Apache licensed code.
 <!-- ## Add tests for new features. -->
 ## 新しい機能へのテストの追加。
 
-### Resolve linting problems using ESLint directives
+<!-- ### Resolve linting problems using ESLint directives -->
+### ESLintディレクティブを使ったリンティングの問題の解決
 
+<!--
 Currently, the building process uses ESLint to validate linting problems in the
 code. Don't use `deno_lint` directives while working with internal Deno code and
 the std library.
+-->
+現在、ビルディングプロセスはコードのリンティングの問題を検証するためにESLいんｔを使用します。Deno内部のコードやstdライブラリでは `deno_lint` ディレクティブを使用しないでください。
 
-What would be:
+<!-- What would be: -->
+次を:
 
 ```typescript
 // deno-lint-ignore no-explicit-any
 let x: any;
 ```
 
-Should rather be:
+<!-- Should rather be: -->
+次のようにしてください:
 
 ```typescript
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let x: any;
 ```
 
+<!--
 This ensures the continuous integration process doesn't fail due to linting
 problems.
+-->
+これは継続的インテグレーションプロセスがリンティング問題で失敗しないことを保証します。
 
 <!--
 Each module should contain or be accompanied by tests for its public
