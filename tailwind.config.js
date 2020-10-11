@@ -20,7 +20,7 @@ module.exports = {
         sans: ["Inter var", "Noto Sans JP", ...defaultTheme.fontFamily.sans],
       },
       width: {
-        "72": "18rem",
+        72: "18rem",
       },
     },
   },

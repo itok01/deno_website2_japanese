@@ -7,10 +7,13 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
+  DocumentInitialProps,
 } from "next/document";
 
 export default class DenoDocDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
@@ -23,7 +26,7 @@ export default class DenoDocDocument extends Document {
   gtag_body = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9DQ4WJ"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
 
-  render() {
+  render(): React.ReactElement {
     return (
       // <Html lang="en">
       <Html lang="ja">
