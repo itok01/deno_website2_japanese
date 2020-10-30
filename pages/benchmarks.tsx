@@ -320,8 +320,9 @@ function Benchmarks(): React.ReactElement {
                   TypeScriptの型チェックが行われ、<em>no_check</em>
                   では完全な形チェックをスキップするため<code>--no-check</code>
                   フラグが使われます。<em>バンドル</em>
-                  はフル型チェックと一つのファイルへの出力をしますが、<em>bundle_no_check</em>
-                  は<em>--no-check</em>フラグを使って完全な型チェックをスキップします。
+                  はフル型チェックと一つのファイルへの出力をしますが、
+                  <em>bundle_no_check</em>は<em>--no-check</em>
+                  フラグを使って完全な型チェックをスキップします。
                 </p>
               </div>
             </div>
