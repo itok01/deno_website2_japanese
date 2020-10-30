@@ -63,6 +63,18 @@ function Registry(): React.ReactElement {
     }
   }
 
+  function getFormattedDateTime(date: Date) {
+    const format = new Intl.DateTimeFormat(undefined, {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      month: "numeric",
+      day: "numeric",
+      year: "numeric",
+    });
+    return format.format(date);
+  }
+
   // Base paths
   const basePath = useMemo(
     () => `${isStd ? "" : "/x"}/${name}${version ? `@${version}` : ""}`,
@@ -409,7 +421,7 @@ function Registry(): React.ReactElement {
                   </div>
                   <div className="col-span-1 row-start-1 md:row-start-auto flex flex-col sm:flex-row md:flex-col gap-4">
                     <div className="max-w-sm w-full shadow-sm rounded-lg border border-gray-200 overflow-hidden">
-                      <div className="bg-gray-50 border-b border-gray-200 p-4">
+                      <div className="bg-gray-50 p-4">
                         <div className="text-xl font-bold">{name}</div>
                         {versionMeta === undefined ||
                         moduleMeta === undefined ? (
@@ -490,6 +502,45 @@ function Registry(): React.ReactElement {
                           />
                         </div>
                       </div>
+                    </div>
+
+                    <div className="max-w-sm w-full shadow-sm rounded-lg border border-gray-200 p-4">
+                      <p className="text-md font-semibold mb-2">Version Info</p>
+                      {versionMeta === undefined ? (
+                        <div className="mt-2 flex items-center py-0.5">
+                          <svg
+                            className="h-5 w-5 mr-2 inline text-gray-200"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <title>Tagged at</title>
+                            <path
+                              fillRule="evenodd"
+                              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <div className="w-4/5 sm:w-2/3 bg-gray-100 h-4"></div>
+                        </div>
+                      ) : versionMeta === null ? null : (
+                        <div className="mt-2 flex text-sm items-center">
+                          <svg
+                            className="h-5 w-5 mr-2 inline text-gray-700"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <title>Tagged at</title>
+                            <path
+                              fillRule="evenodd"
+                              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <div>
+                            {getFormattedDateTime(versionMeta.uploadedAt)}
+                          </div>
+                        </div>
+                      )}
                     </div>
                     {documentationURL && externalDependencies !== null ? (
                       <div className="max-w-sm w-full shadow-sm rounded-lg border border-gray-200 p-4">

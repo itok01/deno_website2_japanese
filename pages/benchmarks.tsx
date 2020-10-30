@@ -23,7 +23,7 @@ import { CookieBanner } from "../components/CookieBanner";
 function Benchmarks(): React.ReactElement {
   const _ = useRouter();
   const location = typeof window !== "undefined" ? window.location : null;
-  const typescriptBenches = ["check", "no_check", "bundle"];
+  const typescriptBenches = ["check", "no_check", "bundle", "bundle_no_check"];
 
   let show!: { dataFile: string; range: number[]; search: string };
   // Default (recent).
@@ -310,8 +310,9 @@ function Benchmarks(): React.ReactElement {
                   modules. With <em>check</em> a full TypeScript type check is
                   performed, while <em>no_check</em> uses the{" "}
                   <code>--no-check</code> flag to skip a full type check.{" "}
-                  <em>bundle</em>
-                  does a full type check and generates a single file output.
+                  <em>bundle</em> does a full type check and generates a single
+                  file output, while <em>bundle_no_check</em> uses the{" "}
+                  <code>--no-check</code> flag to skip a full type check.
                   */}
                   どちらの場合も、<code>std/examples/chat/server_test.ts</code>{" "}
                   はDenoによってキャッシュされています。ワークロードには20個のユニークな
@@ -319,7 +320,8 @@ function Benchmarks(): React.ReactElement {
                   TypeScriptの型チェックが行われ、<em>no_check</em>
                   では完全な形チェックをスキップするため<code>--no-check</code>
                   フラグが使われます。<em>バンドル</em>
-                  はフル型チェックと一つのファイルへの出力をします。
+                  はフル型チェックと一つのファイルへの出力をしますが、<em>bundle_no_check</em>
+                  は<em>--no-check</em>フラグを使って完全な型チェックをスキップします。
                 </p>
               </div>
             </div>
