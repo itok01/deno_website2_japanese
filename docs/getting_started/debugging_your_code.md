@@ -105,7 +105,7 @@ Devtools:
 スクリプトの実行が再開したら、リクエストを送ってDevtoolsで解析してみましょう:
 
 ```
-$ curl http://0.0.0.0:4500/
+$ curl http://0.0.0.0:4507/
 ```
 
 ![Break in request handling](../images/debugger5.jpg)

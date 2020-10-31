@@ -23,8 +23,8 @@ Deno.test("Hello Test", () => {
 - `assertEquals(actual: unknown, expected: unknown, msg?: string): void`
 - `assertNotEquals(actual: unknown, expected: unknown, msg?: string): void`
 - `assertStrictEquals(actual: unknown, expected: unknown, msg?: string): void`
-- `assertStringContains(actual: string, expected: string, msg?: string): void`
-- `assertArrayContains(actual: unknown[], expected: unknown[], msg?: string): void`
+- `assertStringIncludes(actual: string, expected: string, msg?: string): void`
++- `assertArrayIncludes(actual: unknown[], expected: unknown[], msg?: string): void`
 - `assertMatch(actual: string, expected: RegExp, msg?: string): void`
 - `assertNotMatch(actual: string, expected: RegExp, msg?: string): void`
 - `assertThrows(fn: () => void, ErrorClass?: Constructor, msgIncludes = "", msg?: string): Error`
@@ -116,33 +116,33 @@ precise check against two primitive types.
 
 <!--
 There are two methods available to assert a value contains a value,
-`assertStringContains()` and `assertArrayContains()`.
+`assertStringIncludes()` and `assertArrayIncludes()`.
 -->
-値に含まれる値をアサートするには、`assertStringContains()` と `assertArrayContains()` の二つのメソッドが利用可能です。
+値に含まれる値をアサートするには、`assertStringIncludes()` と `assertArrayIncludes()` の二つのメソッドが利用可能です。
 
 <!--
-The `assertStringContains()` assertion does a simple includes check on a string
+The `assertStringIncludes()` assertion does a simple includes check on a string
 to see if it contains the expected string.
 -->
-`assertStringContains()` アサーションは予測される文字列が含まれているかどうかを確認するための、文字列に対する簡単な含有チェックです。
+`assertStringIncludes()` アサーションは予測される文字列が含まれているかどうかを確認するための、文字列に対する簡単な含有チェックです。
 
 ```js
 Deno.test("Test Assert String Contains", () => {
-  assertStringContains("Hello World", "Hello");
+  assertStringIncludes("Hello World", "Hello");
 });
 ```
 
 <!--
-The `assertArrayContains()` assertion is slightly more advanced and can find
+The `assertArrayIncludes()` assertion is slightly more advanced and can find
 both a value within an array and an array of values within an array.
 -->
-`assertArrayContains()` アサーションは、配列の値と配列内の値の配列の両方を見つけることができる少し高度なアサーションです。
+`assertArrayIncludes()` アサーションは、配列の値と配列内の値の配列の両方を見つけることができる少し高度なアサーションです。
 
 ```js
 Deno.test("Test Assert Array Contains", () => {
-  assertArrayContains([1, 2, 3], [1]);
-  assertArrayContains([1, 2, 3], [1, 2]);
-  assertArrayContains(Array.from("Hello World"), Array.from("Hello"));
+  assertArrayIncludes([1, 2, 3], [1]);
+  assertArrayIncludes([1, 2, 3], [1, 2]);
+  assertArrayIncludes(Array.from("Hello World"), Array.from("Hello"));
 });
 ```
 

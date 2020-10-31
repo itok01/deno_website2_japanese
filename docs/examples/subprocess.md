@@ -18,6 +18,8 @@
 - `--allow-run` パーミッションはサブプロセスの生成に必要です。
 - 生成されたサブプロセスはセキュリティサンドボックス内で実行されません。
 - サブプロセスとの通信は [stdin](https://doc.deno.land/builtin/stable#Deno.stdin)、[stdout](https://doc.deno.land/builtin/stable#Deno.stdout)、[stderr](https://doc.deno.land/builtin/stable#Deno.stderr) ストリームを通して行います。
+- Use a specific shell by providing its path/name and its string input switch,
+  e.g. `Deno.run({cmd: ["bash", "-c", '"ls -la"']});
 
 <!-- ## Simple example -->
 ## 簡単な例

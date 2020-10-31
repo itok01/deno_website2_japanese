@@ -9,8 +9,8 @@
 <!-- Deno supports [import maps](https://github.com/WICG/import-maps). -->
 Denoは [import maps](https://github.com/WICG/import-maps) をサポートしています。
 
-<!-- You can use import maps with the `--importmap=<FILE>` CLI flag. -->
-`--importmap=<FILE>` CLIフラグでimport mapsを使うことが出来まます。
+<!-- You can use import maps with the `--import-map=<FILE>` CLI flag. -->
+`--import-map=<FILE>` CLIフラグでimport mapsを使うことが出来まます。
 
 <!-- Current limitations: -->
 現在の制約:
@@ -51,7 +51,7 @@ console.log(red("hello world"));
 次に:
 
 ```shell
-$ deno run --importmap=import_map.json --unstable color.ts
+$ deno run --import-map=import_map.json --unstable color.ts
 ```
 
 <!-- To use starting directory for absolute imports: -->
