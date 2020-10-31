@@ -349,11 +349,15 @@ export interface PWrite {
 export function pwrite(options: PWrite) {}
 ```
 
-### Export all interfaces that are used as parameters to an exported member
+<!-- ### Export all interfaces that are used as parameters to an exported member -->
+### エクスポートされたメンバーのパラメーターとして使用されるすべてのインターフェースをエスクスポートしてください
 
+<!--
 Whenever you are using interfaces that are included in the arguments of an
 exported member, you should export the interface that is used. Here is an
 example:
+-->
+エクスポートされたメンバーの引数に含まれるインターフェースを使用する場合は、使用されるインターフェースをエクスポートする必要があります。いかに例を示します:
 
 ```ts
 // my_file.ts

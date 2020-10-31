@@ -1,10 +1,15 @@
 # Read-eval-print-loop
 
+<!--
 `deno repl` starts an read-eval-print-loop, which lets you interactively build
 up program state in the global context.
+-->
+`deno repl` グローバルコンテクスト内でのプログラムの状態を対話的に構築する入力・評価・出力ループを開始します。
 
-## Keyboard shortcuts
+<!-- ## Keyboard shortcuts -->
+## キーボードショートカット
 
+<!--
 | Keystroke             | Action                                                                                           |
 | --------------------- | ------------------------------------------------------------------------------------------------ |
 | Ctrl-A, Home          | Move cursor to the beginning of line                                                             |
@@ -43,10 +48,57 @@ up program state in the global context.
 | Meta-T                | Transpose words                                                                                  |
 | Meta-U                | Upper-case the next word                                                                         |
 | Meta-Y                | See Ctrl-Y                                                                                       |
+-->
 
-## Special variables
+| キーストローク        | 操作                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------ |
+| Ctrl-A, Home          | カーソルを行の最初に移動する                                                                     |
+| Ctrl-B, Left          | カーソルを一文字左に移動する                                                                     |
+| Ctrl-C                | 現在の編集を中断しキャンセルする                                                                 |
+| Ctrl-D                | 行が _空の_ 場合、終了シグナルを送る                                                             |
+| Ctrl-D, Del           | 行が _空でない_ 場合、カーソルの下の文字を削除する                                               |
+| Ctrl-E, End           | 行の最後にカーソルを移動する                                                                     |
+| Ctrl-F, Right         | カーソルを一文字右に移動する                                                                     |
+| Ctrl-H, Backspace     | カーソルの前の文字を削除する                                                                     |
+| Ctrl-I, Tab           | 次の補完する                                                                                     |
+| Ctrl-J, Ctrl-M, Enter | 行の入力を終了する                                                                               |
+| Ctrl-K                | カーソルから行の最後までを削除する                                                               |
+| Ctrl-L                | 画面をクリアする                                                                                 |
+| Ctrl-N, Down          | 履歴から次の一致                                                                                 |
+| Ctrl-P, Up            | 履歴から前の一致                                                                                 |
+| Ctrl-R                | 履歴を逆から検索する (Ctrl-S 次へ, Ctrl-G キャンセル)                                            |
+| Ctrl-T                | 以前の文字を現在の文字に入れ替える                                                               |
+| Ctrl-U                | 行の始めからカーソルまでを削除する                                                               |
+| Ctrl-V                | 特別な文字をそれに関連した動作をせずに挿入する (#65)                                             |
+| Ctrl-W                | カーソルまでの単語を削除する (空白を境界として利用)                                              |
+| Ctrl-X Ctrl-U         | 取り消し                                                                                         |
+| Ctrl-Y                | ヤンクバッファから貼り付ける                                                                     |
+| Ctrl-Y                | ヤンクバッファから貼り付ける (Meta-Y で次のヤンクを代わりに貼り付ける)                           |
+| Ctrl-Z                | サスペンド (Unix のみ)                                                                           |
+| Ctrl-_                | 取り消し                                                                                         |
+| Meta-0, 1, ..., -     | 引数の桁数を指定する。`-` は負の引数を開始する。                                                 |
+| Meta-<                | 履歴の最初のエントリーに移動する                                                                 |
+| Meta->                | 履歴の最後のエントリーに移動する                                                                 |
+| Meta-B, Alt-Left      | カーソルを前の単語に移動する                                                                     |
+| Meta-Backspace        | 現在の単語から前方の単語の先頭までを削除する                                                     |
+| Meta-C                | 現在の単語を大文字にする                                                                         |
+| Meta-D                | 前方の単語を削除する                                                                             |
+| Meta-F, Alt-Right     | カーソルを次の単語に移動する                                                                     |
+| Meta-L                | 次の単語を Lower-case にする                                                                     |
+| Meta-T                | 単語を入れ替える                                                                                 |
+| Meta-U                | 次の単語を Upper-case にする                                                                     |
+| Meta-Y                | Ctrl-Y を見てください                                                                            |
 
+<!-- ## Special variables -->
+## 特別な変数
+
+<!--
 | Identifier | Description                          |
 | ---------- | ------------------------------------ |
 | _          | Yields the last evaluated expression |
 | _error     | Yields the last thrown error         |
+-->
+| 識別子     | 説明                                 |
+| ------     | ------------------------------------ |
+| _          | 最後に評価された式を返します         |
+| _error     | 最後に投げられたエラーを返します     |

@@ -21,5 +21,6 @@ DenoはJavaScriptとTypeScriptを使うときに便利なビルトインツー�
 - [依存インスペクター (`deno info`)](./tools/dependency_inspector.md)
 - [ドキュメンテーションジェネレーター (`deno doc`)](./tools/documentation_generator.md)
 - [フォーマッター (`deno fmt`)](./tools/formatter.md)
+- [repl (`deno repl`)](./tools/repl.md)
 - [テストランナー (`deno test`)](./testing.md)
 - [リンター (`deno lint`)](./tools/linter.md)
