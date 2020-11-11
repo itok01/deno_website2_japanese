@@ -66,6 +66,7 @@
     "children": {
       "script_installer": "スクリプトインストーラー",
       "formatter": "フォーマッター",
+      "repl": "Read-eval-print-loop",
       "bundler": "バンドラー",
       "documentation_generator": "ドキュメンテーションジェネレータ",
       "dependency_inspector": "依存関係インスペクター",

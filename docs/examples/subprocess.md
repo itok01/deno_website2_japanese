@@ -14,13 +14,13 @@
   [stdout](https://doc.deno.land/builtin/stable#Deno.stdout) and
   [stderr](https://doc.deno.land/builtin/stable#Deno.stderr) streams.
 - Use a specific shell by providing its path/name and its string input switch,
-  e.g. `Deno.run({cmd: ["bash", "-c", '"ls -la"']});
+  e.g. `Deno.run({cmd: ["bash", "-c", '"ls -la"']});`
 -->
 - Deno [Deno.run](https://doc.deno.land/builtin/stable#Deno.run) を通してサブプロセスを生成することができます。
 - `--allow-run` パーミッションはサブプロセスの生成に必要です。
 - 生成されたサブプロセスはセキュリティサンドボックス内で実行されません。
 - サブプロセスとの通信は [stdin](https://doc.deno.land/builtin/stable#Deno.stdin)、[stdout](https://doc.deno.land/builtin/stable#Deno.stdout)、[stderr](https://doc.deno.land/builtin/stable#Deno.stderr) ストリームを通して行います。
-- 特定のシェルのパス/名前と文字入力スイッチを指定することで、特定のシェルを使用します、例えば `Deno.run({cmd: ["bash", "-c", '"ls -la"']});
+- 特定のシェルのパス/名前と文字入力スイッチを指定することで、特定のシェルを使用します、例えば `Deno.run({cmd: ["bash", "-c", '"ls -la"']});`
 
 <!-- ## Simple example -->
 ## 簡単な例

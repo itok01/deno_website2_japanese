@@ -13,7 +13,7 @@ directly imported. E.g.
 -->
 DenoはJavaScriptとTypeScriptの両方をランタイムの主要言語としてサポートしています。つまり、完全なモジュール名と拡張子(もしくはサーバーが正しいメディアタイプを提供)を要求します。加えて、Denoは"魔法の"モジュール解決をしません。代わりに指定されたファイル(拡張子込み)か完全なURLでモジュールをインポートします。TypeScriptモジュールは直接インポートすることが出来ます。例えば、
 
-```
+```ts
 import { Response } from "https://deno.land/std@$STD_VERSION/http/server.ts";
 import { queue } from "./collections.ts";
 ```

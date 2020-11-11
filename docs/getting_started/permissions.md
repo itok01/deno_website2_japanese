@@ -118,3 +118,9 @@ process will fail.
 ```shell
 deno run --allow-net fetch.ts
 ```
+
+### Conference
+
+Ryan Dahl. (September 25, 2020).
+[The Deno security model](https://www.youtube.com/watch?v=r5F6dekUmdE#t=34m57).
+Speakeasy JS.

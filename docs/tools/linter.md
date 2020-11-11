@@ -193,20 +193,3 @@ function bar(a: any) {
   // ...
 }
 ```
-
-<!--
-To provide some compatibility with ESLint `deno lint` also supports
-`// eslint-disable-next-line` directive. Just like with `// deno-lint-ignore`,
-it's required to specify the ignored rule name:
--->
-ESLintとの互換性を確保するために `deno lint` は `// eslint-disable-next-line` ディレクティブをサポートします。`// deno-lint-ignore` と同様に無視するルールを指定する必要があります:
-
-```ts
-// eslint-disable-next-line no-empty
-while (true) {}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function bar(a: any) {
-  // ...
-}
-```

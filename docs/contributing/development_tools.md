@@ -38,14 +38,14 @@ cargo test std_tests
 コードのリント:
 
 ```shell
-./tools/lint.py
+deno run -A --unstable ./tools/lint.js
 ```
 
 <!-- Format the code: -->
 コードのフォーマット:
 
 ```shell
-./tools/format.py
+deno run -A --unstable ./tools/format.js
 ```
 
 <!-- ### Profiling -->

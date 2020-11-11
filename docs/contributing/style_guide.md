@@ -26,37 +26,26 @@ headers. We only allow MIT, BSD, and Apache licensed code.
 <!-- ## Add tests for new features. -->
 ## 新しい機能へのテストの追加。
 
-<!-- ### Resolve linting problems using ESLint directives -->
-### ESLintディレクティブを使ったリンティングの問題の解決
+<!-- ### Resolve linting problems using directives -->
+### ディレクティブを使ったリンティングの問題の解決
 
 <!--
-Currently, the building process uses ESLint to validate linting problems in the
-code. Don't use `deno_lint` directives while working with internal Deno code and
-the std library.
+Currently, the building process uses `dlint` to validate linting problems in the
+code. If the task requires code that is non-conformant to linter use
+`deno-lint-ignore <code>` directive to supress the warning.
 -->
-現在、ビルディングプロセスはコードのリンティングの問題を検証するためにESLいんｔを使用します。Deno内部のコードやstdライブラリでは `deno_lint` ディレクティブを使用しないでください。
-
-<!-- What would be: -->
-次を:
+現在、ビルディングプロセスはコードのリンティングの問題を検証するために `dlint` を使用します。リンタに適合しないコードを必要とする場合は、`deno-lint-ignore <code>` ディレクティブを使って警告を消してください。
 
 ```typescript
 // deno-lint-ignore no-explicit-any
 let x: any;
 ```
 
-<!-- Should rather be: -->
-次のようにしてください:
-
-```typescript
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-let x: any;
-```
-
 <!--
 This ensures the continuous integration process doesn't fail due to linting
-problems.
+problems, but it should be used scarcely.
 -->
-これは継続的インテグレーションプロセスがリンティング問題で失敗しないことを保証します。
+これは継続的インテグレーションプロセスがリンティング問題で失敗しないことを保証しますが、ほとんど使われることはありません。
 
 <!--
 Each module should contain or be accompanied by tests for its public

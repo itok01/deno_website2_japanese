@@ -59,8 +59,8 @@ Examples of bad PR title:
 2. Ensure there is a related issue and it is referenced in the PR text.
 3. Ensure there are tests that cover the changes.
 4. Ensure `cargo test` passes.
-5. Ensure `./tools/format.py` passes without changing files.
-6. Ensure `./tools/lint.py` passes.
+5. Ensure `./tools/format.js` passes without changing files.
+6. Ensure `./tools/lint.js` passes.
 -->
 1. PRタイトルに説明を書き込んでください。
    
@@ -78,8 +78,8 @@ Examples of bad PR title:
 
 2. 関係するissueがありPRテキストに参照されているかどうかを確かめてください。
 3. 変更をカバーするテストが存在するかを確かめてください。
-5. `./tools/format.py` をファイルの変更なくパスするかどうかを確かめてください。
-6. `./tools/lint.py` をパスするかどうかを確かめてください。
+5. `./tools/format.js` をファイルの変更なくパスするかどうかを確かめてください。
+6. `./tools/lint.js` をパスするかどうかを確かめてください。
 
 <!-- ## Changes to `third_party` -->
 ## `third_party` への変更
