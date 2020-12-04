@@ -96,7 +96,7 @@ command will be `antigen bundle deno` and so on.
 <!-- Example (Powershell): -->
 例 (Powershell):
 
-```shel
+```shell
 deno completions powershell > $profile
 .$profile
 ```
