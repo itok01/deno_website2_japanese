@@ -43,6 +43,7 @@ cat file.ts | deno lint --unstable -
 - `ban-ts-comment`
 - `ban-types`
 - `ban-untagged-ignore`
+- `camelcase`
 - `constructor-super`
 - `for-direction`
 - `getter-return`
@@ -99,11 +100,18 @@ cat file.ts | deno lint --unstable -
 - `no-unused-labels`
 - `no-with`
 - `prefer-as-const`
+- `prefer-const`
 - `prefer-namespace-keyword`
+- `require-await`
 - `require-yield`
-- `triple-slash-reference`
 - `use-isnan`
 - `valid-typeof`
+
+<!--
+For more detail about each rule, visit
+[the deno_lint rule documentation](https://lint.deno.land).
+-->
+それぞれのルールの細かい点は、[the deno_lint rule documentation](https://lint.deno.land) を参照してください。
 
 ### Ignore directives
 
