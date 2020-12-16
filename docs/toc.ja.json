@@ -22,6 +22,7 @@
       "program_lifecycle": "プログラムライフサイクル",
       "permission_apis": "パーミッションAPI",
       "compiler_apis": "コンパイラAPI",
+      "web_platform_apis": "Web プラットフォーム APIs",
       "workers": "ワーカー"
     }
   },
@@ -68,6 +69,7 @@
       "formatter": "フォーマッター",
       "repl": "Read-eval-print-loop",
       "bundler": "バンドラー",
+      "compiler": "実行可能ファイルのコンパイル",
       "documentation_generator": "ドキュメンテーションジェネレータ",
       "dependency_inspector": "依存関係インスペクター",
       "linter": "リンター"
@@ -80,6 +82,7 @@
     "name": "コントリビューティング",
     "children": {
       "building_from_source": "ソースからのビルド",
+      "release_schedule": "リリーススケジュール",
       "development_tools": "開発ツール",
       "style_guide": "スタイルガイド",
       "architecture": "アーキテクチャ"

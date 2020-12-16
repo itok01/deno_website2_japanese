@@ -9,6 +9,7 @@ DenoはJavaScriptとTypeScriptを使うときに便利なビルトインツー�
 
 <!--
 - [bundler (`deno bundle`)](./tools/bundler.md)
+- [compiling executables (`deno compile`)](./tools/compiler.md)
 - [dependency inspector (`deno info`)](./tools/dependency_inspector.md)
 - [documentation generator (`deno doc`)](./tools/documentation_generator.md)
 - [formatter (`deno fmt`)](./tools/formatter.md)
@@ -17,6 +18,7 @@ DenoはJavaScriptとTypeScriptを使うときに便利なビルトインツー�
 - [linter (`deno lint`)](./tools/linter.md)
 -->
 - [バンドラー (`deno bundle`)](./tools/bundler.md)
+- [実行可能ファイルのコンパイル (`deno compile`)](./tools/compiler.md)
 - [デバッガー (`--inspect、--inspect-brk`)](./tools/debugger.md)
 - [依存インスペクター (`deno info`)](./tools/dependency_inspector.md)
 - [ドキュメンテーションジェネレーター (`deno doc`)](./tools/documentation_generator.md)

@@ -11,15 +11,15 @@ more about the runtime.
 ## 基本
 
 <!--
-- [Hello World](./examples/hello_world.md)
-- [Import and Export Modules](./examples/import_export.md)
-- [How to Manage Dependencies](./examples/manage_dependencies.md)
-- [Fetch Data](./examples/fetch_data.md)
-- [Read and Write Files](./examples/read_write_files.md)
+- [Hello world](./examples/hello_world.md)
+- [Import and export modules](./examples/import_export.md
+- [Manage dependencies](./examples/manage_dependencies.md)
+- [Fetch data](./examples/fetch_data.md)
+- [Read and write files](./examples/read_write_files.md)
 -->
-- [Hello World](./examples/hello_world.md)
+- [Hello world](./examples/hello_world.md)
 - [モジュールのインポートとエクスポート](./examples/import_export.md)
-- [どうやって依存関係を管理するか](./examples/manage_dependencies.md)
+- [依存関係の管理](./examples/manage_dependencies.md)
 - [データの取得](./examples/fetch_data.md)
 - [ファイルの読み書き](./examples/read_write_files.md)
 
@@ -27,20 +27,20 @@ more about the runtime.
 ## 応用
 
 <!--
-- [Unix Cat](./examples/unix_cat.md)
-- [File Server](./examples/file_server.md)
-- [TCP Echo](./examples/tcp_echo.md)
-- [Subprocess](./examples/subprocess.md)
-- [Permissions](./examples/permissions.md)
-- [OS Signals](./examples/os_signals.md)
-- [File System Events](./examples/file_system_events.md)
-- [Testing If Main](./examples/testing_if_main.md)
+- [Unix cat program](./examples/unix_cat.md)
+- [HTTP web server](./examples/http_server.md)
+- [File server](./examples/file_server.md)
+- [TCP echo server](./examples/tcp_echo.md)
+- [Creating a subprocess](./examples/subprocess.md)
+- [OS signals](./examples/os_signals.md)
+- [File system events](./examples/file_system_events.md)
+- [Module metadata](./examples/module_metadata.md)
 -->
-- [Unix Cat](./examples/unix_cat.md)
+- [Unix cat プログラム](./examples/unix_cat.md)
+- [HTTP web サーバー](./examples/http_server.md)
 - [ファイルサーバー](./examples/file_server.md)
-- [TCP エコー](./examples/tcp_echo.md)
-- [サブプロセス](./examples/subprocess.md)
-- [パーミッション](./examples/permissions.md)
+- [TCP echo サーバー](./examples/tcp_echo.md)
+- [サブプロセスの作成](./examples/subprocess.md)
 - [OS シグナル](./examples/os_signals.md)
-- [ファイルシステムエベント](./examples/file_system_events.md)
-- [mainかどうかのテスト](./examples/testing_if_main.md)
+- [ファイルシステムイベント](./examples/file_system_events.md)
+- [モジュールメタデータ](./examples/module_metadata.md)

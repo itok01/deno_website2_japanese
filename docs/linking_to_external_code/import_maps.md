@@ -81,7 +81,7 @@ import { MyUtil } from "/util.ts";
 
 {
   "imports": {
-    "/": "./src"
+    "/": "./src/"
   }
 }
 ```

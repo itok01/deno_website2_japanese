@@ -72,12 +72,12 @@ major difference between them, let's run the example:
 $ deno run main.ts
 log from imported script
 log from main script
-got load event in onload function (main)
 got load event in event handler (imported)
 got load event in event handler (main)
-got unload event in onunload function (main)
+got load event in onload function (main)
 got unload event in event handler (imported)
 got unload event in event handler (main)
+got unload event in onunload function (main)
 ```
 
 <!--
@@ -90,6 +90,7 @@ defined in `imported.ts`.
 <!--
 In other words, you can register multiple `window.addEventListener` `"load"` or
 `"unload"` events, but only the last loaded `window.onload` or `window.onunload`
-events will be executed.
+event handlers will be executed. It is preferable to use `addEventListener` when
+possible for this reason.
 -->
-別の言い方では複数の `window.addEventListener` `"load"` もしくは `"unload"` を登録できますが、最後にロードされる `window.onload` や `window.onunload` しか実行されません。
+別の言い方では複数の `window.addEventListener` `"load"` もしくは `"unload"` を登録できますが、最後にロードされる `window.onload` や `window.onunload` しか実行されません。このため、可能であれば `addEventListener` を使用したほうが良いです。
