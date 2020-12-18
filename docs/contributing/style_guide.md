@@ -32,7 +32,7 @@ headers. We only allow MIT, BSD, and Apache licensed code.
 <!--
 Currently, the building process uses `dlint` to validate linting problems in the
 code. If the task requires code that is non-conformant to linter use
-`deno-lint-ignore <code>` directive to supress the warning.
+`deno-lint-ignore <code>` directive to suppress the warning.
 -->
 現在、ビルディングプロセスはコードのリンティングの問題を検証するために `dlint` を使用します。リンタに適合しないコードを必要とする場合は、`deno-lint-ignore <code>` ディレクティブを使って警告を消してください。
 
@@ -584,7 +584,7 @@ include potentially unreviewed third party code.
 -->
 `https://deno.land/std/` はすべてのDenoプログラムが使う基本機能であるように意図されています。私達はこのコードにはユーザーにレビューされていない可能性があるサードパーティコードを含んでないことを保証したいです。
 
-<!-- #### Document and maintain browser compatiblity. -->
+<!-- #### Document and maintain browser compatibility. -->
 #### ブラウザ互換をドキュメントにし維持する。
 
 <!--

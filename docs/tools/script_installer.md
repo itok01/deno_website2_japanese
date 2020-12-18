@@ -98,10 +98,10 @@ network and read permissions and binds to port 8080.
 上記のコマンドは、ネットワークと読み取りパーミッションを設定し8080番のポートにバインドする `file_server` と呼ばれる実行可能ファイルを作っています。
 
 <!--
-For good practice, use the [`import.meta.main`](../examples/testing_if_main.md)
+For good practice, use the [`import.meta.main`](../examples/module_metadata.md)
 idiom to specify the entry point in an executable script.
 -->
-練習のために、実行可能スクリプトファイルの中のエントリーポイントを特定する [`import.meta.main`](../examples/testing_if_main.md) イディオムを使ってみましょう。
+練習のために、実行可能スクリプトファイルの中のエントリーポイントを特定する [`import.meta.main`](../examples/module_metadata.md) イディオムを使ってみましょう。
 
 <!-- Example: -->
 例:

@@ -132,7 +132,7 @@ function foo(): any {
 }
 ```
 
-<!-- Ignore directive must be placed before first stament or declaration: -->
+<!-- Ignore directive must be placed before first statement or declaration: -->
 Ignore directiveは文や宣言の前に置く必要があります:
 
 <!--

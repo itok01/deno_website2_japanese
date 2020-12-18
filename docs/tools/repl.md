@@ -29,7 +29,7 @@ up program state in the global context.
 | Ctrl-R                | Reverse Search history (Ctrl-S forward, Ctrl-G cancel)                                           |
 | Ctrl-T                | Transpose previous character with current character                                              |
 | Ctrl-U                | Delete from start of line to cursor                                                              |
-| Ctrl-V                | Insert any special character without performing its associated action (#65)                      |
+| Ctrl-V                | Insert any special character without performing its associated action                            |
 | Ctrl-W                | Delete word leading up to cursor (using white space as a word boundary)                          |
 | Ctrl-X Ctrl-U         | Undo                                                                                             |
 | Ctrl-Y                | Paste from Yank buffer                                                                           |
@@ -69,7 +69,7 @@ up program state in the global context.
 | Ctrl-R                | 履歴を逆から検索する (Ctrl-S 次へ, Ctrl-G キャンセル)                                            |
 | Ctrl-T                | 以前の文字を現在の文字に入れ替える                                                               |
 | Ctrl-U                | 行の始めからカーソルまでを削除する                                                               |
-| Ctrl-V                | 特別な文字をそれに関連した動作をせずに挿入する (#65)                                             |
+| Ctrl-V                | 特別な文字をそれに関連した動作をせずに挿入する                                                   |
 | Ctrl-W                | カーソルまでの単語を削除する (空白を境界として利用)                                              |
 | Ctrl-X Ctrl-U         | 取り消し                                                                                         |
 | Ctrl-Y                | ヤンクバッファから貼り付ける                                                                     |
