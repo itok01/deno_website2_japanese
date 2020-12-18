@@ -31,6 +31,7 @@ with a file watcher).
 -->
 `deno run`、`deno test`、`deno cache` もしくは `deno bundle` を使う時 `--no-check` を使うことでTypeScriptの型チェックを無効にすることが出来ます。これはプログラムのスタートアップ処理の時間をかなり減らすことが出来ます。エディターが型チェックを提供していたり可能化限りスタートアップの時間を早くしたいとき(例えばファイル監視システムと連動してプログラムを自動再起動する時)にかなり便利です。
 
+<!--
 To make the most of skipping type checks, `--no-check` transpiles each module in
 isolation without using information from imported modules. This maximizes
 potential for concurrency and incremental rebuilds. On the other hand, the
@@ -41,10 +42,15 @@ resolve such ambiguities, Deno enforces
 all TS code. This means that `Foo` in the above example must be a value, and the
 [`export type`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-exports)
 syntax must be used instead if `Foo` is a type.
+-->
+型チェックをスキップするために、`--no-check` はインポートされたモジュールの情報を使わずに書くモジュールごとにトランスパイルします。これにより同時並行性とインクリメンタルリビルドの限界が最大になります。一方で、`export { Foo } from "./foo.ts"` が保存されるべきか(`Foo` が値の場合)削除されるべきか(`Foo` が型の場合)、トランスパイラーは知ることができません。Denoではこのような曖昧さを回避するためにすべてのTSコードに [`isolatedModules`](https://www.typescriptlang.org/tsconfig#isolatedModules) を適応しています。つまり上記の例で `Foo` は値であり、`Foo` が型である場合 [`export type`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-exports) を使用してください。
 
+<!--
 Another consequence of `isolatedModules` is that the type-directed `const enum`
 is treated like `enum`. The legacy `import =` and `export =` syntaxes are also
 not supported by `--no-check`.
+-->
+`isolatedModules` のもう一つの重要な点は型していの `const enum` を `enum` のように扱われることです。従来の `import =` と `export =` 構文も `--no-check` ではサポートされていません。
 
 <!-- ### Using external type definitions -->
 ### 外部の型定義の使用

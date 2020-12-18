@@ -16,8 +16,11 @@ Deno uses these rather than inventing a new proprietary API.
 -->
 HTTPリクエストの `fetch` などのすでに存在しているwebスタンダードAPIについて、Denoは新しい独自のAPIを作るのではなくこれらを利用しています。
 
+<!--
 For more details, view the chapter on
 [Web Platform APIs](./runtime/web_platform_apis.md).
+-->
+詳細は [Web Platform APIs](./runtime/web_platform_apis.md) チャプターを参照してください。
 
 <!-- ## `Deno` global -->
 ## `Deno` グローバル
