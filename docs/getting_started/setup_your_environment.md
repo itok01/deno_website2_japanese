@@ -262,13 +262,19 @@ if executable("deno")
 endif
 ```
 
-##### Example for Sublime Text
+<!-- ##### Example for Sublime Text -->
+##### Sublime Text での例
 
+<!--
 - Install the [Sublime LSP package](https://packagecontrol.io/packages/LSP)
 - Install the
   [TypeScript package](https://packagecontrol.io/packages/TypeScript) to get
   syntax highlighting
 - Add the following `.sublime-project` file to your project folder
+-->
+- [Sublime LSP package](https://packagecontrol.io/packages/LSP) をインストールしてください
+- シンタックスハイライトのため [TypeScript package](https://packagecontrol.io/packages/TypeScript) をインストールしてください
+- 以下の `.sublime-project` ファイルをプロジェクトフォルダーに追加してください
 
 ```json
 {
