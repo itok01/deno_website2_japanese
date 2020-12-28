@@ -207,9 +207,9 @@ project (`npm init -y` as necessary), then add the following block to your
 
 <!--
 Deno has builtin support for the
-[Language server protocol](https://langserver.org).
+[Language server protocol](https://langserver.org) as of version 1.6.0 or later.
 -->
-Deno は [Language server protocol](https://langserver.org) へビルトインサポートしています
+Deno はバージョン1.6.0以降 [Language server protocol](https://langserver.org) へビルトインサポートしています
 
 <!--
 If your editor supports the LSP, you can use Deno as a language server for
@@ -260,6 +260,71 @@ if executable("deno")
     \ })
   augroup END
 endif
+```
+
+##### Example for Sublime Text
+
+- Install the [Sublime LSP package](https://packagecontrol.io/packages/LSP)
+- Install the
+  [TypeScript package](https://packagecontrol.io/packages/TypeScript) to get
+  syntax highlighting
+- Add the following `.sublime-project` file to your project folder
+
+```json
+{
+  "settings": {
+    "LSP": {
+      "deno": {
+        "command": [
+          "deno",
+          "lsp"
+        ],
+        "initializationOptions": {
+          // "config": "", // Sets the path for the config file in your project
+          "enable": true,
+          // "importMap": "", // Sets the path for the import-map in your project
+          "lint": true,
+          "unstable": false
+        },
+        "enabled": true,
+        "languages": [
+          {
+            "languageId": "javascript",
+            "scopes": ["source.js"],
+            "syntaxes": [
+              "Packages/Babel/JavaScript (Babel).sublime-syntax",
+              "Packages/JavaScript/JavaScript.sublime-syntax"
+            ]
+          },
+          {
+            "languageId": "javascriptreact",
+            "scopes": ["source.jsx"],
+            "syntaxes": [
+              "Packages/Babel/JavaScript (Babel).sublime-syntax",
+              "Packages/JavaScript/JavaScript.sublime-syntax"
+            ]
+          },
+          {
+            "languageId": "typescript",
+            "scopes": ["source.ts"],
+            "syntaxes": [
+              "Packages/TypeScript-TmLanguage/TypeScript.tmLanguage",
+              "Packages/TypeScript Syntax/TypeScript.tmLanguage"
+            ]
+          },
+          {
+            "languageId": "typescriptreact",
+            "scopes": ["source.tsx"],
+            "syntaxes": [
+              "Packages/TypeScript-TmLanguage/TypeScriptReact.tmLanguage",
+              "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
 ```
 
 <!--
