@@ -150,11 +150,8 @@ changed on disk, the program will automatically be restarted.
 -->
 `--watch` フラグを `deno run` につけることでビルトインファイルウォッチャーを有効にすることができます。Denoがこのフラグとともに起動したらエントリーポイントを、エントリーポイントからの全てのローカルファイルを監視します。これらのファイルがディスク上で変更されたらプログラムは自動で再起動します。
 
-<!--
 **Note: file watcher is a new feature and still unstable thus it requires
 `--unstable` flag**
--->
-**注意: file watcher は新しい機能でまだ不安定なので `--unstable` フラッグが必要です**
 
 ```
 deno run --watch --unstable main.ts
