@@ -12,7 +12,7 @@ It's built on V8, Rust, and Tokio.
 -->
 V8、Rust、Tokioを使って作られています。
 
-<!-- ## Feature Highlights -->
+<!-- ## Feature highlights -->
 ## 機能のハイライト
 
 <!--
@@ -56,25 +56,26 @@ Denoはランタイムとパッケージマネージャの両方の機能を持�
 
 <!--
 Among other things, Deno is a great replacement for utility scripts that may
-have been historically written with bash or python.
+have been historically written with Bash or Python.
 -->
-とりわけ、Denoはbashやpythonで書かれた過去のユーティリティースクリプトの優れた代替です。
+とりわけ、DenoはBashやPythonで書かれた過去のユーティリティースクリプトの優れた代替です。
 
 <!-- ## Goals -->
 ## ゴール
 
 <!--
 - Only ship a single executable (`deno`).
-- Provide Secure Defaults.
+- Provide secure defaults.
   - Unless specifically allowed, scripts can't access files, the environment, or
     the network.
-- Browser compatible: The subset of Deno programs which are written completely
-  in JavaScript and do not use the global `Deno` namespace (or feature test for
-  it), ought to also be able to be run in a modern web browser without change.
-- Provide built-in tooling like unit testing, code formatting, and linting to
-  improve developer experience.
-- Does not leak V8 concepts into user land.
-- Be able to serve HTTP efficiently.
+- Be browser-compatible.
+  - The subset of Deno programs which are written completely in JavaScript and
+    do not use the global `Deno` namespace (or feature test for it), ought to
+    also be able to be run in a modern web browser without change.
+- Provide built-in tooling to improve developer experience.
+  - E.g. unit testing, code formatting, and linting.
+- Not leak V8 concepts into user land.
+- Serve HTTP efficiently.
 -->
 - 1つの実行ファイル(`deno`)で実行可能。
 - 安全な初期設定の提供。

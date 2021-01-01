@@ -18,6 +18,8 @@ tested. There are two styles you can use.
 
 <!--
 ```ts
+import { assertEquals } from "https://deno.land/std@$STD_VERSION/testing/asserts.ts";
+
 // Simple name and function, compact form, but not configurable
 Deno.test("hello world #1", () => {
   const x = 1 + 2;
@@ -35,6 +37,8 @@ Deno.test({
 ```
 -->
 ```ts
+import { assertEquals } from "https://deno.land/std@$STD_VERSION/testing/asserts.ts";
+
 // シンプルな名前と関数コンパクトですが、設定可能ではないです。
 Deno.test("hello world #1", () => {
   const x = 1 + 2;
