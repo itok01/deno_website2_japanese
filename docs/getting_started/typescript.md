@@ -50,7 +50,7 @@ Another consequence of `isolatedModules` is that the type-directed `const enum`
 is treated like `enum`. The legacy `import =` and `export =` syntaxes are also
 not supported by `--no-check`.
 -->
-`isolatedModules` のもう一つの重要な点は型していの `const enum` を `enum` のように扱われることです。従来の `import =` と `export =` 構文も `--no-check` ではサポートされていません。
+`isolatedModules` のもう一つの重要な点は型指定の `const enum` を `enum` のように扱われることです。従来の `import =` と `export =` 構文も `--no-check` ではサポートされていません。
 
 <!-- ### Using external type definitions -->
 ### 外部の型定義の使用
