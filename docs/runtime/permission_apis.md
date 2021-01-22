@@ -45,10 +45,10 @@ const desc1 = { name: "write" } as const;
 const desc2 = { name: "write", path: "foo/bar" } as const;
 
 // Global net permission.
-const desc3 = { name: "net" } as const;
+const desc3 = { name: "net", host: "127.0.0.1" } as const;
 
 // Net permission to 127.0.0.1:8000.
-const desc4 = { name: "net", url: "127.0.0.1:8000" } as const;
+const desc4 = { name: "net", host: "127.0.0.1:8000" } as const;
 
 // High-resolution time permission.
 const desc5 = { name: "hrtime" } as const;
@@ -62,10 +62,10 @@ const desc1 = { name: "write" } as const;
 const desc2 = { name: "write", path: "foo/bar" } as const;
 
 // グローバルネットパーミッション。
-const desc3 = { name: "net" } as const;
+const desc3 = { name: "net", host: "127.0.0.1" } as const;
 
 // 127.0.0.1:8000へのネットパーミッション。
-const desc4 = { name: "net", url: "127.0.0.1:8000" } as const;
+const desc4 = { name: "net", host: "127.0.0.1:8000" } as const;
 
 // 高分解能時間パーミッション。
 const desc5 = { name: "hrtime" } as const;
@@ -140,7 +140,7 @@ const desc2 = { name: "write", path: "/foo" } as const;
 
 const desc3 = { name: "net" } as const;
 // is stronger than
-const desc4 = { name: "net", url: "127.0.0.1:8000" } as const;
+const desc4 = { name: "net", host: "127.0.0.1:8000" } as const;
 ```
 -->
 ```ts
@@ -150,7 +150,7 @@ const desc2 = { name: "write", path: "/foo" } as const;
 
 const desc3 = { name: "net" } as const;
 // 上記は以下より強いです
-const desc4 = { name: "net", url: "127.0.0.1:8000" } as const;
+const desc4 = { name: "net", host: "127.0.0.1:8000" } as const;
 ```
 
 <!-- ### Request permissions -->

@@ -81,18 +81,6 @@ Examples of bad PR title:
 5. `./tools/format.js` をファイルの変更なくパスするかどうかを確かめてください。
 6. `./tools/lint.js` をパスするかどうかを確かめてください。
 
-<!-- ## Changes to `third_party` -->
-## `third_party` への変更
-
-<!--
-[`deno_third_party`](https://github.com/denoland/deno_third_party) contains most
-of the external code that Deno depends on, so that we know exactly what we are
-executing at any given time. It is carefully maintained with a mixture of manual
-labor and private scripts. It's likely you will need help from @ry or
-@piscisaureus to make changes.
--->
-[`deno_third_party`](https://github.com/denoland/deno_third_party) はDenoが依存しているほとんどの外部のコードを含んで、いつでも何を実行しているかを正確に把握することが出来ます。努力とプライベートスクリプトで丁寧にメンテナンスされています。変更するには @ry や @piscisaureus の助けが必要になるでしょう。
-
 <!-- ## Adding Ops (aka bindings) -->
 ## Ops(別名、バインディング)を追加
 

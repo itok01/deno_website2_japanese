@@ -8,7 +8,7 @@
 リポジトリ内のほとんどのモジュールはルギのコピーライトヘッダーを持つべきです:
 
 ```ts
-// Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
+// Copyright 2018-2021 the Deno authors. All rights reserved. MIT license.
 ```
 
 <!--
@@ -594,7 +594,7 @@ of the module:
 モジュールがブラウザ互換であれば、次のJSDocをモジュールの最初に含めてください。
 
 ```ts
-/** This module is browser compatible. */
+// This module is browser compatible.
 ```
 
 <!--

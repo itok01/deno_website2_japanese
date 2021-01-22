@@ -10,7 +10,6 @@ version is released weekly, except in the week before a new minor release.
 <!-- The release dates for the upcoming minor releases are: -->
 今後のマイナーリリースの日付は:
 
-- 1.7.0: January 19th, 2021
 - 1.8.0: March 2nd, 2021
 - 1.9.0: April 13, 2021
 

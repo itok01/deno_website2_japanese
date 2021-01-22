@@ -28,7 +28,7 @@ one you can run in the browser:
 ブラウザ互換はという意味は、Denoによる `Hello World` プログラムがブラウザで実行するものと同じということです:
 
 ```ts
-console.log("Welcome to Deno 🦕");
+console.log("Welcome to Deno!");
 ```
 
 <!-- Try the program: -->
