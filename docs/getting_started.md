@@ -19,7 +19,6 @@
 - [自身でスクリプトの記述](./getting_started/first_steps.md)
 - [コマンドラインインターフェース](./getting_started/command_line_interface.md)
 - [パーミッションの理解](./getting_started/permissions.md)
-- [TypeScriptでのDenoの使用](./getting_started/typescript.md)
 - [WebAssemblyの使用](./getting_started/webassembly.md)
 - [コードのデバッグ](./getting_started/debugging_your_code.md)
   
