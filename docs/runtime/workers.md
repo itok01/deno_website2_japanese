@@ -19,11 +19,14 @@ the `type: "module"` option when creating a new worker.
 -->
 現在、Denoは `module` タイプのワーカーのみサポートしています; そのため、新しいワーカーを作成するときに `type: "module"` オプションを指定します。
 
+<!--
 Use of relative module specifiers in the main worker are only supported with
 `--location <href>` passed on the CLI. This is not recommended for portability.
 You can instead use the `URL` contructor and `import.meta.url` to easily create
 a specifier for some nearby script. Dedicated workers, however, have a location
 and this capability by default.
+-->
+メインワーカーでの相対モジュールの使用はCLIで渡された `--location <href>` 内でのみサポートされます。これは移植性のために推奨されません。代わりに近くにあるスクリプトの指定子を簡単に作るため、`URL` コンストラクタと `import.meta.url` を使用してください。しかし、専用のワーカーはデフォルトで場所とこの機能を持っています。
 
 <!--
 ```ts
@@ -152,23 +155,36 @@ $ deno run --allow-read --unstable main.js
 hello world
 ```
 
-### Specifying worker permissions
+<!-- ### Specifying worker permissions -->
+### ワーカーのパーミッションの指定
 
+<!--
 > This is an unstable Deno feature. Learn more about
 > [unstable features](./stability.md).
+-->
+> これは Deno の不安定な機能です。詳しくは [不安定な機能](./stability.md) を参照してください。
 
+<!--
 The permissions available for the worker are analogous to the CLI permission
 flags, meaning every permission enabled there can be disabled at the level of
 the Worker API. You can find a more detailed description of each of the
 permission options [here](../getting_started/permissions.md).
+-->
+ワーカーで利用可能なパーミッションはCLIパーミッションフラグに似ていて、そこで許可されたすべてのパーミッションはワーカー API のレベルで無効にできます。すべてのパーミッションオプションのそれぞれの詳しい説明は [ここ](../getting_started/permissions.md) を参照してください。
 
+<!--
 By default a worker will inherit permissions from the thread it was created in,
 however in order to allow users to limit the access of this worker we provide
 the `deno.permissions` option in the worker API.
+-->
+デフォルトではワーカーは自信が作成されたスレッドと同じパーミッションを継承します、しかし、ユーザーがこのワーカーのアクセスを制限するためワーカー API に　`deno.permissions` オプションを要しいています。
 
+<!--
 - For permissions that support granular access you can pass in a list of the
   desired resources the worker will have access to, and for those who only have
   the on/off option you can pass true/false respectively.
+-->
+- 緻密なアクセスをサポートするパーミッションについては、ワーカーがアクセスするリソースのリストを渡すことができ、on/off オプションのみ持っているものについては、それぞれ true/false を渡すことができます。
 
   ```ts
   const worker = new Worker(new URL("./worker.js", import.meta.url).href, {
@@ -189,10 +205,13 @@ the `deno.permissions` option in the worker API.
   });
   ```
 
+<!--
 - Granular access permissions receive both absolute and relative routes as
   arguments, however take into account that relative routes will be resolved
   relative to the file the worker is instantiated in, not the path the worker
   file is currently in
+-->
+- 緻密なアクセスパーミッションは引数として絶対と相対経路の両方を受け取りますが、相対経路はワーカーファイルが存在する現在のパスではなくワーカーがインスタンス化されたファイルに対して相対的に解決されることを考慮してください。
 
   ```ts
   const worker = new Worker(new URL("./worker/worker.js", import.meta.url).href, {
@@ -209,8 +228,11 @@ the `deno.permissions` option in the worker API.
   });
   ```
 
+<!--
 - Both `deno.permissions` and its children support the option `"inherit"`, which
   implies it will borrow its parent permissions.
+-->
+- `deno.permissions` とその子達はオプション `"inherit"` をサポートし、親のパーミッションを借ります。
 
   ```ts
   // This worker will inherit its parent permissions
@@ -242,8 +264,11 @@ the `deno.permissions` option in the worker API.
   });
   ```
 
+<!--
 - Not specifying the `deno.permissions` option or one of its children will cause
   the worker to inherit by default.
+-->
+- `deno.permissions` オプションやその子を指定しないとワーカーはデフォルトを継承します。
 
   ```ts
   // This worker will inherit its parent permissions
@@ -265,8 +290,11 @@ the `deno.permissions` option in the worker API.
   });
   ```
 
+<!--
 - You can disable the permissions of the worker all together by passing false to
   the `deno.permissions` option.
+-->
+- `deno.permissions` に false を渡すことでオプションワーカーのパーミッションをすべて無効にすることができます。
 
   ```ts
   // This worker will not have any permissions enabled
