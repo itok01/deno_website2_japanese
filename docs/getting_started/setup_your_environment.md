@@ -171,23 +171,31 @@ CoCをインストールした後は、vim側から`:CocInstall coc-tsserver`と
 
 ##### ALE
 
+<!--
 ALE integrates with Deno's LSP out of the box and should not require any extra
 configuration. However, if your Deno executable is not located in `$PATH`, has a
 different name than `deno` or you want to use unstable features/APIs, you need
 to override ALE's default values. See
 [`:help ale-typescript`](https://github.com/dense-analysis/ale/blob/master/doc/ale-typescript.txt).
+-->
 
+<!--
 ALE provides support for autocompletion, refactoring, going to definition,
 finding references and more, however, key bindings need to be configured
 manually. Copy the snippet below into your `vimrc`/`init.vim` for basic
 configuration or consult the
 [official documentation](https://github.com/dense-analysis/ale#table-of-contents)
 for a more in-depth look at how to configure ALE.
+-->
+ALE は自動補完、リファクタリング、定義への移動、参照の検索などをサポートしていますが、キーバインディングは手動で設定する必要があります。以下のスニペットを `vimrc`/`init.vim` にコピーして基本的な設定を行うか、ALE の設定方法については [公式ドキュメント](https://github.com/dense-analysis/ale#table-of-contents) を参照してください。
 
+<!--
 ALE can fix linter issues by running `deno fmt`. To instruct ALE to use the Deno
 formatter the `ale_linter` setting needs to be set either on a per buffer basis
 (`let b:ale_linter = ['deno']`) or globally for all TypeScript files
 (`let g:ale_fixers={'typescript': ['deno']}`)
+-->
+ALE は `deno fmt` を実行することでリンタの問題を修正することができます。ALE に Deno フォーマッタを使うように指示するには、`ale_linter` の設定をバッファごとに設定するか (`let b:ale_linter = ['deno']`)、またはすべての TypeScript ファイルに対してグローバルに設定する必要があります (`let g:ale_fixers={'typescript': ['deno']}`)。
 
 ```vim
 " Use ALE autocompletion with Vim's 'omnifunc' setting (press <C-x><C-o> in insert mode)
