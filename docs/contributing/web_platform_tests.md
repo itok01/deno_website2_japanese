@@ -90,6 +90,16 @@ Python 3.
 -->
 これはpython3 (Windowsでは `python.exe`) が実際に Python3 であることを確認します。
 
+You can specify the following flags to customize bahaviour:
+
+```
+--rebuild
+    Rebuild the manifest instead of downloading. This can take up to 3 minutes.
+
+--auto-config
+    Automatically configure /etc/hosts if it is not configured (no prompt will be shown).
+```
+
 #### `run`
 
 <!-- Run all tests like specified in `expectation.json`. -->
