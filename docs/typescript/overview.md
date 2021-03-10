@@ -221,4 +221,4 @@ has type definitions (e.g. a `.d.ts` file), you have to explicitly tell Deno
 about this. The details of how this is accomplished are covered in the
 [Types and type declarations](./types.md) section.
 -->
-Deno の基本設定の一つに "魔法のような" 解決を避けることがあり、これは型解決にも当てはまります。型定義を持つ JavaScript (例、`.d.ts` ファイル) を利用したい場合、Deno にそれを利用したいことを明示的に伝える必要があります。この方法と詳細は [Types and type declarations](./types.md) セクションを参照してください。
+Deno の基本設定の一つに "魔法のような" 解決を避けることがあり、これは型解決にも当てはまります。型定義を持つ JavaScript (例、`.d.ts` ファイル) を利用したい場合、Deno にそれを利用したいことを明示的に伝える必要があります。この方法と詳細は [型と型宣言](./types.md) セクションを参照してください。
