@@ -153,9 +153,12 @@ DenoのためのJetBrains IDEの設定のその他の情報はYouTrackの [this 
 <!--
 Vim works fairly well for Deno/TypeScript if you install
 [CoC](https://github.com/neoclide/coc.nvim) (intellisense engine and language
-server protocol).
+server protocol) or [ALE](https://github.com/dense-analysis/ale) (syntax checker
+and language server protocol client).
 -->
-[CoC](https://github.com/neoclide/coc.nvim) (インテリセンスエンジンと言語サーバープロトコル)をインストールすれば、Deno/TypeScript上でvimを使うことができます。
+[CoC](https://github.com/neoclide/coc.nvim) (インテリセンスエンジンと言語サーバープロトコル) か [ALE](https://github.com/dense-analysis/ale) (構文チェッカーと言語サーバープロトコルクライアント) をインストールすれば、Deno/TypeScript上でvimを使うことができます。
+
+##### CoC
 
 <!--
 After CoC is installed, from inside Vim, run`:CocInstall coc-tsserver` and
@@ -165,6 +168,40 @@ From now on, things like `gd` (go to definition) and `gr` (goto/find references)
 should work.
 -->
 CoCをインストールした後は、vim側から`:CocInstall coc-tsserver`と`:CocInstall coc-deno`を実行させてみましょう。Denoの型定義のために自動補完機能を実装させるためには`:CocCommand deno.types`の実行が必要です。必要に応じて、`:CocRestart`でCoCのサーバーのリスタートを行いましょう。この動作以降、`gd` (go to definition)や`gr` (goto/find references)といったものが動くようになります。
+
+##### ALE
+
+ALE integrates with Deno's LSP out of the box and should not require any extra
+configuration. However, if your Deno executable is not located in `$PATH`, has a
+different name than `deno` or you want to use unstable features/APIs, you need
+to override ALE's default values. See
+[`:help ale-typescript`](https://github.com/dense-analysis/ale/blob/master/doc/ale-typescript.txt).
+
+ALE provides support for autocompletion, refactoring, going to definition,
+finding references and more, however, key bindings need to be configured
+manually. Copy the snippet below into your `vimrc`/`init.vim` for basic
+configuration or consult the
+[official documentation](https://github.com/dense-analysis/ale#table-of-contents)
+for a more in-depth look at how to configure ALE.
+
+ALE can fix linter issues by running `deno fmt`. To instruct ALE to use the Deno
+formatter the `ale_linter` setting needs to be set either on a per buffer basis
+(`let b:ale_linter = ['deno']`) or globally for all TypeScript files
+(`let g:ale_fixers={'typescript': ['deno']}`)
+
+```vim
+" Use ALE autocompletion with Vim's 'omnifunc' setting (press <C-x><C-o> in insert mode)
+autocmd FileType typescript set omnifunc=ale#completion#OmniFunc
+
+" Make sure to use map instead of noremap when using a <Plug>(...) expression as the {rhs}
+nmap gr <Plug>(ale_rename)
+nmap gR <Plug>(ale_find_reference)
+nmap gd <Plug>(ale_go_to_definition)
+nmap gD <Plug>(ale_go_to_type_definition)
+
+let g:ale_fixers = {'typescript': ['deno']}
+let g:ale_fix_on_save = 1 " run deno fmt when saving a buffer
+```
 
 #### Emacs
 

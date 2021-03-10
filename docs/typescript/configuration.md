@@ -119,7 +119,8 @@ Deno 用の `tsconfig.json` を書くと、以下のようになります:
     "lib": ["deno.window"],
     "module": "esnext",
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "useDefineForClassFields": true
   }
 }
 ```
