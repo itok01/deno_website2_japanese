@@ -24,7 +24,7 @@ V8、Rust、Tokioを使って作られています。
   formatter (`deno fmt`).
 - Has
   [a set of reviewed (audited) standard
-  modules](https://github.com/denoland/deno/tree/master/std) that are guaranteed
+  modules](https://github.com/denoland/deno_std) that are guaranteed
   to work with Deno.
 - Scripts can be bundled into a single JavaScript file.
 -->
@@ -32,7 +32,7 @@ V8、Rust、Tokioを使って作られています。
 - 最初からTypeScriptをサポート。
 - 1つの実行ファイル(`deno`)で実行可能。
 - 依存関係インスペクター(`deno info`)やコードフォーマッター(`deno fmt`)などのビルトインユーティリティーを持っています。
-- Denoで動作する[審査済み(監査済み)の標準モジュール](https://github.com/denoland/deno/tree/master/std)を持っています。
+- Denoで動作する[審査済み(監査済み)の標準モジュール](https://github.com/denoland/deno_std)を持っています。
 - 複数のスクリプトを1つのJavaScriptファイルにバンドルすることが出来ます。
 
 <!-- ## Philosophy -->
