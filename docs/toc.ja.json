@@ -93,6 +93,7 @@
     "children": {
       "building_from_source": "ソースからのビルド",
       "development_tools": "開発ツール",
+      "web_platform_tests": "Web プロットフォームテスト",
       "style_guide": "スタイルガイド",
       "architecture": "アーキテクチャ",
       "release_schedule": "リリーススケジュール"

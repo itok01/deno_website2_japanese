@@ -90,7 +90,8 @@ Python 3.
 -->
 これはpython3 (Windowsでは `python.exe`) が実際に Python3 であることを確認します。
 
-You can specify the following flags to customize bahaviour:
+<!-- You can specify the following flags to customize bahaviour: -->
+動作をカスタマイズするために次のフラグを指定知ることができます:
 
 ```
 --rebuild
