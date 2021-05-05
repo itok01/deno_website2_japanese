@@ -168,7 +168,7 @@ Cargoでビルド:
 # Build:
 cargo build -vv
 
-# Build errors?  Ensure you have latest master and try building again, or if that doesn't work try:
+# Build errors?  Ensure you have latest main and try building again, or if that doesn't work try:
 cargo clean && cargo build -vv
 
 # Run:
@@ -179,7 +179,7 @@ cargo clean && cargo build -vv
 # ビルド:
 cargo build -vv
 
-# ビルドエラー？最新のmasterを取得しているか確かめて、もう一度ビルドしてください、もしくは動かない場合はこれを試してください:
+# ビルドエラー？最新のmainを取得しているか確かめて、もう一度ビルドしてください、もしくは動かない場合はこれを試してください:
 cargo clean && cargo build -vv
 
 # 実行:

@@ -24,12 +24,12 @@ deno run --unstable mod_which_uses_unstable_stuff.ts
 <!--
 - It enables the use of unstable APIs during runtime.
 - It adds the
-  [`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d.ts)
+  [`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/main/cli/dts/lib.deno.unstable.d.ts)
   file to the list of TypeScript definitions that are used for type checking.
   This includes the output of `deno types`.
 -->
 - 実行中に不安定版のAPIの使用を有効化します。
-- [`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.unstable.d.ts)
+- [`lib.deno.unstable.d.ts`](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/main/cli/dts/lib.deno.unstable.d.ts)
   ファイルを型チェックのためのTypeScriptの定義に追加します。これには `deno type` の出力も含まれます。
 
 <!--

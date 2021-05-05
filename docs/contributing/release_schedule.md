@@ -23,10 +23,10 @@ Stable releases can be found on the
 
 <!--
 In addition to the stable channel described above, canaries are released
-multiple times daily (for each commit on master). You can upgrade to the latest
+multiple times daily (for each commit on main). You can upgrade to the latest
 canary release by running:
 -->
-上記の安定チャンネルの他に canaries は毎日複数回(master の各コミットごとに)リリースされています。最新の canary チャンネルにアップグレードするには以下を実行してください:
+上記の安定チャンネルの他に canaries は毎日複数回(main の各コミットごとに)リリースされています。最新の canary チャンネルにアップグレードするには以下を実行してください:
 
 ```
 deno upgrade --canary

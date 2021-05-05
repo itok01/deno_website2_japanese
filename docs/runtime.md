@@ -42,6 +42,6 @@ Deno名前空間のTypeScriptの定義は [`lib.deno.ns.d.ts`](https://github.co
 
 <!--
 The documentation for all of the Deno specific APIs can be found on
-[doc.deno.land](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.ns.d.ts).
+[doc.deno.land](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/main/cli/dts/lib.deno.ns.d.ts).
 -->
-Deno特有のAPIのドキュメントは [doc.deno.land](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/master/cli/dts/lib.deno.ns.d.ts) にあります。
+Deno特有のAPIのドキュメントは [doc.deno.land](https://doc.deno.land/https/raw.githubusercontent.com/denoland/deno/main/cli/dts/lib.deno.ns.d.ts) にあります。

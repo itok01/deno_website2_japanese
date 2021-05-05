@@ -162,12 +162,12 @@ and language server protocol client).
 
 <!--
 After CoC is installed, from inside Vim, run`:CocInstall coc-tsserver` and
-`:CocInstall coc-deno`. To get autocompletion working for Deno type definitions
-run `:CocCommand deno.types`. Optionally restart the CoC server `:CocRestart`.
-From now on, things like `gd` (go to definition) and `gr` (goto/find references)
-should work.
+`:CocInstall coc-deno`. Run `:CocCommand deno.initializeWorkspace` in your
++project to initialize workspace configurations. From now on, things like `gd`
+(go to definition) and `gr` (goto/find references) should work.
 -->
-CoCをインストールした後は、vim側から`:CocInstall coc-tsserver`と`:CocInstall coc-deno`を実行させてみましょう。Denoの型定義のために自動補完機能を実装させるためには`:CocCommand deno.types`の実行が必要です。必要に応じて、`:CocRestart`でCoCのサーバーのリスタートを行いましょう。この動作以降、`gd` (go to definition)や`gr` (goto/find references)といったものが動くようになります。
+CoCをインストールした後は、vim側から`:CocInstall coc-tsserver`と`:CocInstall coc-deno`を実行させてみましょう。
+ワークスペースの設定を初期化するために `:CocCommand deno.initializeWorkspace` をプロジェクトで実行してください。これより、`gd` (go to definition) と `gr` (goto/find references) が動くはずです。
 
 ##### ALE
 
@@ -233,7 +233,7 @@ project (`npm init -y` as necessary), then add the following block to your
 -->
 これを使うためにまずEmacsのインスタンスに `tide` が設定されていることを確認してください。次に、[typescript-deno-plugin](https://github.com/justjavac/typescript-deno-plugin) のページにあるように、まず `npm install --save-dev typescript-deno-plugin typescript` をプロジェクト内で実行してください(`npm init -y` を必要です)、そして次のコードを `tsconfig.json` に追加してください、これですぐに始めることが出来ます!
 
-```json
+```jsonc
 {
   "compilerOptions": {
     "plugins": [
@@ -326,7 +326,7 @@ endif
 - シンタックスハイライトのため [TypeScript package](https://packagecontrol.io/packages/TypeScript) をインストールしてください
 - 以下の `.sublime-project` ファイルをプロジェクトフォルダーに追加してください
 
-```json
+```jsonc
 {
   "settings": {
     "LSP": {

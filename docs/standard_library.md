@@ -24,19 +24,19 @@ Deno is released.
 <!--
 We strongly suggest to always use imports with pinned version of standard
 library to avoid unintended changes. For example, rather than linking to the
-master branch of code, which may change at any time, potentially causing
+default branch of code, which may change at any time, potentially causing
 compilation errors or unexpected behavior:
 -->
-意図しない変更を回避するために標準ライブラリは固定されたバージョンをつねにインポートすることを強くおすすめします。例えば、いつでも変更される可能性があり、コンパイルエラーや予期できない動作を起こす可能性があるマスターブランチのコードにリンクするより:
+意図しない変更を回避するために標準ライブラリは固定されたバージョンをつねにインポートすることを強くおすすめします。例えば、いつでも変更される可能性があり、コンパイルエラーや予期できない動作を起こす可能性があるデフォルトブランチのコードにリンクするより:
 
 <!--
 ```typescript
-// imports from master, this should be avoided
+// imports the latest release, this should be avoided
 import { copy } from "https://deno.land/std/fs/copy.ts";
 ```
 -->
 ```typescript
-// マスターからインポート、これは避けるべきです
+// 最新リリースからインポート、これは避けるべきです
 import { copy } from "https://deno.land/std/fs/copy.ts";
 ```
 
