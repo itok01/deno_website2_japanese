@@ -1,9 +1,12 @@
 <!-- ## Release Schedule -->
 ## リリーススケジュール
 
+<!--
 A new minor release for the `deno` cli is released every 6 weeks. After 1.9.0 we
 will be switching to a 4 week release cycle. A new patch version is released
 weekly, as necessary.
+-->
+`deno` cli の新しいマイナーリリースは6週間毎に行われます。1.9.0 のあと4週毎のリリースサイクルに切り替えます。必要に応じて新しいパッチバージョンが毎週リリースされます。
 
 <!-- The release dates for the upcoming minor releases are: -->
 今後のマイナーリリースの日付は:
