@@ -26,14 +26,14 @@ V8、Rust、Tokioを使って作られています。
   [a set of reviewed (audited) standard
   modules](https://github.com/denoland/deno_std) that are guaranteed
   to work with Deno.
-- Scripts can be bundled into a single JavaScript file.
+- Can bundle scripts into a single JavaScript file.
 -->
 - デフォルトで安全。ファイル、ネットワーク、環境へのアクセスなし(明示的に有効にしない限り)。
 - 最初からTypeScriptをサポート。
 - 1つの実行ファイル(`deno`)で実行可能。
 - 依存関係インスペクター(`deno info`)やコードフォーマッター(`deno fmt`)などのビルトインユーティリティーを持っています。
 - Denoで動作する[審査済み(監査済み)の標準モジュール](https://github.com/denoland/deno_std)を持っています。
-- 複数のスクリプトを1つのJavaScriptファイルにバンドルすることが出来ます。
+- スクリプトを1つのJavaScriptファイルにバンドルすることが出来ます。
 
 <!-- ## Philosophy -->
 ## 哲学
@@ -64,7 +64,7 @@ have been historically written with Bash or Python.
 ## ゴール
 
 <!--
-- Only ship a single executable (`deno`).
+- Ship as just a single executable (`deno`).
 - Provide secure defaults.
   - Unless specifically allowed, scripts can't access files, the environment, or
     the network.
@@ -74,7 +74,7 @@ have been historically written with Bash or Python.
     also be able to be run in a modern web browser without change.
 - Provide built-in tooling to improve developer experience.
   - E.g. unit testing, code formatting, and linting.
-- Not leak V8 concepts into user land.
+- Keep V8 concepts out of user land.
 - Serve HTTP efficiently.
 -->
 - 1つの実行ファイル(`deno`)で実行可能。
@@ -84,7 +84,7 @@ have been historically written with Bash or Python.
   - 完全に JavaScript で書かれていて、グローバル `Deno` 名前空間を使っていない Deno プラグラムのサブセット(もしくはそのための機能テスト)は、モダンなブラウザでも変更なしに実行できるようにする必要があります。
 - デベロッパーエクスペリエンスを向上させるためのビルトインツールの提供。
   - 例えば、ユニットテスト、コードフォーマット、リント。
-- V8のコンセプトをユーザーランドに漏らさないこと。
+- V8のコンセプトをユーザーランドから排除。
 - 効率的にHTTPを提供できること。
 
 <!-- ## Comparison to Node.js -->
@@ -98,8 +98,8 @@ have been historically written with Bash or Python.
   than Node.
 - Deno requires explicit permissions for file, network, and environment access.
 - Deno always dies on uncaught errors.
-- Uses "ES Modules" and does not support `require()`. Third party modules are
-  imported via URLs:
+- Deno uses "ES Modules" and does not support `require()`. Third party modules
+  are imported via URLs:
 -->
 - Denoは`npm`を使いません。
   - モジュールの参照にはURLやファイルパスを使います。
@@ -117,7 +117,7 @@ have been historically written with Bash or Python.
 ## その他の重要な振る舞い
 
 <!--
-- Remote code is fetched and cached on first execution, and never updated until
+- Fetch and cache remote code upon first execution, and never update it until
   the code is run with the `--reload` flag. (So, this will still work on an
   airplane.)
 - Modules/files loaded from remote URLs are intended to be immutable and

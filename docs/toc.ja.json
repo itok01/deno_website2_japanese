@@ -89,6 +89,9 @@
   "embedding_deno": {
     "name": "Denoの埋め込み"
   },
+  "help": {
+    "name": "ヘルプ"
+  },
   "contributing": {
     "name": "コントリビューティング",
     "children": {

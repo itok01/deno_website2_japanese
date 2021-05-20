@@ -9,9 +9,9 @@ Maybe. That is the best answer, we are afraid. For lots of reasons, Deno has
 chosen to have fully qualified module specifiers. In part this is because it
 treats TypeScript as a first class language. Also, Deno uses explicit module
 resolution, with no _magic_. This is effectively the same way browsers
-themselves work, thought they don't obviously support TypeScript directly. If
-the TypeScript modules use imports that don't have these design decisions in
-mind, they may not work under Deno.
+themselves work, though they don't obviously support TypeScript directly. If the
+TypeScript modules use imports that don't have these design decisions in mind,
+they may not work under Deno.
 -->
 多分使用できます。これがベストアンサーです。多くの理由から、Deno は完全に装飾されたモジュール指定師を持つことを選択しました。これは TypeScript を第一級言語として扱うからです。また、Deno は明示的な _魔法_ を使わず、モジュール解決を使用します。これはブラウザが直接 TypeScript をサポートしているわけではないにしても、事実上ブラウザのの動作と同じです。TypeScript モジュールがこれらの設計を考慮していないインポートを使用している場合、Deno では動作しないかもしれません。
 

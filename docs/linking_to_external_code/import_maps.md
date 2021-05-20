@@ -34,15 +34,16 @@ console.log(red("hello world"));
 $ deno run --import-map=import_map.json  color.ts
 ```
 
-<!-- To use starting directory for absolute imports: -->
-絶対的インポートに開始ディレクトリを使う:
+<!-- To use your project root for absolute imports: -->
+絶対的インポートにプロジェクトルートを使う:
 
 **import_map.json**
 
 ```jsonc
 {
   "imports": {
-    "/": "./"
+    "/": "./",
+    "./": "./"
   }
 }
 ```
@@ -53,15 +54,5 @@ $ deno run --import-map=import_map.json  color.ts
 import { MyUtil } from "/util.ts";
 ```
 
-<!-- You may map a different directory: (eg. src) -->
-別のディレクトリをマップすることも出来ます: (例、src)
-
-**import_map.json**
-
-```jsonc
-{
-  "imports": {
-    "/": "./src/"
-  }
-}
-```
+This causes import specifiers starting with `/` to be resolved relative to the
+import map's URL or file path.
