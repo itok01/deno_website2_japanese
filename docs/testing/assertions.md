@@ -49,9 +49,13 @@ Deno.test("Test Assert", () => {
 });
 ```
 
-### Exists
+<!-- ### Exists -->
+### 存在するかどうか
 
+<!--
 The `assertExists` can be used to check if a value is not `null` or `undefined`.
+-->
+`assertExists` は値が `null` や `undefined` でないことをチェックするために使用されます。
 
 ```js
 assertExists("Denosaurus");
@@ -188,8 +192,11 @@ Deno.test("Test Assert Not Match", () => {
 
 ### Object
 
+<!--
 Use `assertObjectMatch` to check that a JavaScript object matches a subset of
 the properties of an object.
+-->
+JavaScript オブジェクトがオブジェクトのプロパティのサブセットにマッチするかどうかをチェックするためには `assertObjectMatch` を使ってください。
 
 ```js
 // Simple subset
