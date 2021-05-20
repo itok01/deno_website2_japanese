@@ -290,13 +290,17 @@ Deno.test("Test Assert Equal Fail Custom Message", () => {
 });
 ```
 
-### Custom Tests
+<!-- ### Custom Tests -->
+### カスタムテスト
 
+<!--
 While Deno comes with powerful
 [assertions modules](https://deno.land/std@$STD_VERSION/testing/asserts.ts) but
 there is always something specific to the project you can add. Creating
 `custom assertion function` can improve readability and reduce the amount of
 code.
+-->
+Deno には強力な [assertions modules](https://deno.land/std@$STD_VERSION/testing/asserts.ts) がありますが、プロジェクトに特有の何かを追加することは可能です。`custom assertion function` を作成することで読みやすさを向上させコードの料を減らすことができます。
 
 ```js
 function assertPowerOf(actual: number, expected: number, msg?: string): void {
@@ -311,7 +315,8 @@ function assertPowerOf(actual: number, expected: number, msg?: string): void {
 }
 ```
 
-Use this matcher in your code like this:
+<!-- Use this matcher in your code like this: -->
+この matcher をコードでこのように使います:
 
 ```js
 Deno.test("Test Assert PowerOf", () => {
