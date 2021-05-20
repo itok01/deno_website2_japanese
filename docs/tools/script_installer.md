@@ -106,7 +106,7 @@ idiom to specify the entry point in an executable script.
 <!-- Example: -->
 例:
 
-<!-- dprint-ignore -->
+<!-- deno-fmt-ignore -->
 
 <!--
 ```ts

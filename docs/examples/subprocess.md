@@ -105,6 +105,10 @@ const p = Deno.run({
 
 const { code } = await p.status();
 
+// Reading the outputs closes their pipes
+const rawOutput = await p.output();
+const rawError = await p.stderrOutput();
+
 if (code === 0) {
   const rawOutput = await p.output();
   await Deno.stdout.write(rawOutput);

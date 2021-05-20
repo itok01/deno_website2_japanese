@@ -51,11 +51,11 @@ choco install deno
 brew install deno
 ```
 
-<!-- Using [Cargo](https://crates.io/crates/deno) (Windows, macOS, Linux): -->
-[Cargo](https://crates.io/crates/deno) (Windows、macOS、Linux) を使う:
+<!-- Build and install from source using [Cargo](https://crates.io/crates/deno): -->
+[Cargo](https://crates.io/crates/deno) を使ってソースからビルドしてインストール:
 
 ```shell
-cargo install deno
+cargo install deno --locked
 ```
 
 <!--

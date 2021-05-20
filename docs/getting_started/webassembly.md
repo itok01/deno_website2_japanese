@@ -8,7 +8,7 @@ interfaces that
 -->
 Deno は　[browsers provide](https://developer.mozilla.org/en-US/docs/WebAssembly) と同じインターフェースと使って [WebAssembly](https://webassembly.org/) モジュールを実行できます。
 
-<!-- dprint-ignore -->
+<!-- deno-fmt-ignore -->
 
 ```ts
 const wasmCode = new Uint8Array([
