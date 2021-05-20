@@ -156,11 +156,17 @@ Deno.test({
 
 ### Exit sanitizer
 
+<!--
 There's also the exit sanitizer which ensures that tested code doesn't call
 Deno.exit() signaling a false test success.
+-->
+テストされたコードが Deno.exit() を呼び出して誤ってテストが成功したことにならないようにする exit sanitizer もあります。
 
+<!--
 This is enabled by default for all tests, but can be disabled by setting the
 `sanitizeExit` boolean to false in thetest definition.
+-->
+これはすべてのテストに対しデフォルトで有効ですが、定義で `sanitizeExit` を false に設定することで無効にできます。
 
 ```ts
 Deno.test({
@@ -360,14 +366,23 @@ deno test --fail-fast
 <!-- ## Test coverage -->
 ## テストカバレッジ
 
+<!--
 Deno will collect test coverage into a directory for your code if you specify
 the `--coverage` flag when starting `deno test`.
+-->
+`deno test` の起動時に `--coverage` フラグを指定することで、Deno はテストカバレッジをコードのディレクトリに集めます。
 
+<!--
 This coverage information is acquired directly from the JavaScript engine (V8)
 which is very accurate.
+-->
+このカバレッジ情報は JavaScript エンジン (V8) から直接取得していて、非常に正確です。
 
+<!--
 This can then be further processed from the internal format into well known
 formats by the `deno coverage` tool.
+-->
+これは `deno coverage` ツールによって、内部フォーマットからよく知られたフォーマットに処理されます。
 
 ```
 # Go into your project's working directory
@@ -386,10 +401,16 @@ deno coverage --unstable cov_profile --lcov > cov_profile.lcov
 genhtml -o cov_profile/html cov_profile.lcov
 ```
 
+<!--
 By default, `deno coverage` will exclude any files matching the regular
 expression `test\.(js|mjs|ts|jsx|tsx)` and only consider including files
 matching the regular expression `^file:`.
+-->
+デフォルトでは `deno coverage` は正規表現 `test\.(js|mjs|ts|jsx|tsx)` にあるファイルをすべて除き、正規表現 `^file:` にマッチするファイルのみ考慮します。
 
+<!--
 These filters can be overriden using the `--exclude` and `--include` flags. A
 source file's url must match both regular expressions for it to be a part of the
 report.
+-->
+これらのフィルタは、`--exclude` と `--include` フラグを使って上書きすることができます。レポートの一部になるために、ソースファイルの URL が正規表現にマッチする必要があります。
