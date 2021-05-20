@@ -2,12 +2,6 @@
 ## パーミッションAPI
 
 <!--
-> This API is unstable. Learn more about
-> [unstable features](../runtime/stability.md).
--->
-> このAPIは不安定です。詳しくは [不安定版の機能](../runtime/stability.md) を参照してください。
-
-<!--
 Permissions are granted from the CLI when running the `deno` command. User code
 will often assume its own set of required permissions, but there is no guarantee
 during execution that the set of _granted_ permissions will align with this.
@@ -78,7 +72,7 @@ const desc5 = { name: "hrtime" } as const;
 ディスクリプタによってパーミッションが許可されているかどうかをチェックする。
 
 ```ts
-// deno run --unstable --allow-read=/foo main.ts
+// deno run --allow-read=/foo main.ts
 
 const desc1 = { name: "read", path: "/foo" } as const;
 console.log(await Deno.permissions.query(desc1));
@@ -160,7 +154,7 @@ const desc4 = { name: "net", host: "127.0.0.1:8000" } as const;
 ユーザーからCLIプロンプトを通して未許可のパーミッションのリクエストをします。
 
 ```ts
-// deno run --unstable main.ts
+// deno run main.ts
 
 const desc1 = { name: "read", path: "/foo" } as const;
 const status1 = await Deno.permissions.request(desc1);
@@ -199,7 +193,7 @@ requests.
 "granted"から"prompt"へのダウングレード。
 
 ```ts
-// deno run --unstable --allow-read=/foo main.ts
+// deno run --allow-read=/foo main.ts
 
 const desc = { name: "read", path: "/foo" } as const;
 console.log(await Deno.permissions.revoke(desc));
@@ -213,7 +207,7 @@ one granted on the CLI?
 しかし、CLIで許可された _部分的な_ パーミッションを取り消したい場合はどうなるでしょうか？
 
 ```ts
-// deno run --unstable --allow-read=/foo main.ts
+// deno run --allow-read=/foo main.ts
 
 const desc = { name: "read", path: "/foo/bar" } as const;
 console.log(await Deno.permissions.revoke(desc));
@@ -260,7 +254,7 @@ whichever _explicitly granted permission descriptor_ is _stronger than_ `desc`.
 Denoのパーミッション取り消しアルゴリズムは引数パーミッションディスクリプタのセットの全ての _より強い_ 要素を削除することで動作します。したがって `desc` が許可されなくなったことを確実にするために  `desc` _より強い_ すべての _明示的に許可されたパーミッションディスクリプタ_ _より強い_ ディクリプタに引数を渡してください。
 
 ```ts
-// deno run --unstable --allow-read=/foo main.ts
+// deno run --allow-read=/foo main.ts
 
 const desc = { name: "read", path: "/foo/bar" } as const;
 console.log(await Deno.permissions.revoke(desc)); // Insufficient.
