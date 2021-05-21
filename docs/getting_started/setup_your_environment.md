@@ -140,6 +140,7 @@ Support for JetBrains IDEs is available through
 -->
 JetBrains IDEへのサポートは [the Deno plugin](https://plugins.jetbrains.com/plugin/14382-deno) にあります。
 
+<!--
 Once installed, replace the content of
 `External Libraries > Deno Library > lib > lib.deno.d.ts` with the output of
 `deno types`. This will ensure the typings for the extension match the current
@@ -147,6 +148,8 @@ version. You will have to do this every time you update the version of Deno. For
 more information on how to set-up your JetBrains IDE for Deno, read
 [this comment](https://youtrack.jetbrains.com/issue/WEB-41607#focus=streamItem-27-4160152.0-0)
 on YouTrack.
+-->
+インストールしたら、`External Libraries > Deno Library > lib > lib.deno.d.ts` の内容を、`deno types` の出力で置き換えてください。これにより、拡張機能のタイピングが現在のバージョンと一致するようになります。Denoのバージョンをアップデートするたびに、この作業を行う必要があります。Deno 用に JetBrains IDE をセットアップする方法の詳細については、YouTrackの [このコメント](https://youtrack.jetbrains.com/issue/WEB-41607#focus=streamItem-27-4160152.0-0) をお読みください。
 
 <!-- #### Vim and NeoVim -->
 #### VimとNeoVim
