@@ -103,14 +103,19 @@ write.then(() => console.log("File written to ./hello.txt"));
  */
 ```
 
+<!--
 By combining `Deno.writeTextFile` and `JSON.stringify` you can easily write
 serialized JSON objects to a file. This example uses synchronous
 `Deno.writeTextFileSync`, but this can also be done asynchronously using
 `await Deno.writeTextFile`.
+-->
+`Deno.writeTextFile` と `JSON.stringify` を組み合わせることで、シリアライズされたJSONオブジェクトを簡単にファイルに書き込むことができます。この例では、同期的な `Deno.writeTextFileSync` を使用していますが、`await Deno.writeTextFile` を使用して非同期的に行うこともできます。
 
-To execute the code the `deno run` command needs the write flag.
+<!-- To execute the code the `deno run` command needs the write flag. -->
+コードを実行するには `deno run` コマンドに write フラグが必要です。
 
-**Command:** `deno run --allow-write write.ts`
+<!-- **Command:** `deno run --allow-write write.ts` -->
+**コマンド:** `deno run --allow-write write.ts`
 
 ```typescript
 /**
