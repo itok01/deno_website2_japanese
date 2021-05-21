@@ -51,7 +51,8 @@ choco install deno
 brew install deno
 ```
 
-Using [Nix](https://nixos.org/download.html) (macOS and Linux):
+<!-- Using [Nix](https://nixos.org/download.html) (macOS and Linux): -->
+[Nix](https://nixos.org/download.html) を使う (macOS and Linux):
 
 ```shell
 nix-shell -p deno
