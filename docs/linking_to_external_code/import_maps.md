@@ -54,5 +54,8 @@ $ deno run --import-map=import_map.json  color.ts
 import { MyUtil } from "/util.ts";
 ```
 
+<!--
 This causes import specifiers starting with `/` to be resolved relative to the
 import map's URL or file path.
+-->
+これにより `/` で始まるインポート指定子はインポートマップのURLまたはファイルパスに対して相対的に解決されます。
