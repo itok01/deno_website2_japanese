@@ -1,13 +1,17 @@
-### Profiling
+<!-- ### Profiling -->
+### プロファイリング
 
-### Perf profiling:
+<!-- ### Perf profiling: -->
+### Perf プロファイリング:
 
-Tools that can be used to generate/ visualise perf results:
+<!-- Tools that can be used to generate/ visualise perf results: -->
+Perf の結果を生成/可視化するために使用できるツール:
 
 - flamegraph-rs (https://github.com/flamegraph-rs/flamegraph)
 - flamescope (https://github.com/Netflix/flamescope)
 
-Example using perf on `micro_bench_ops` and visualising using flamescope:
+<!-- Example using perf on `micro_bench_ops` and visualising using flamescope: -->
+`micro_bench_ops`で Perf を使用し、flamescope で可視化した例:
 
 ```sh
 # build `examples/micro_bench_ops`
@@ -20,7 +24,8 @@ sudo perf script --header > micro_bench_ops_perf
 # now open the file using flamescope
 ```
 
-Example running `deno_tcp.ts` in combination with flamegraph (`script.sh`):
+<!-- Example running `deno_tcp.ts` in combination with flamegraph (`script.sh`): -->
+`deno_tcp.ts` を flamegraph と組み合わせて実行した例 (`script.sh`):
 
 ```sh
 sudo flamegraph -o flamegraph.svg target/debug/deno run --allow-net cli/bench/deno_tcp.ts &
@@ -30,9 +35,11 @@ sleep 1
 kill `pgrep perf`
 ```
 
-### v8 profiling:
+<!-- ### v8 profiling: -->
+### v8 プロファイリング:
 
-Example using v8 profiling on `micro_bench_ops`:
+<!-- Example using v8 profiling on `micro_bench_ops`: -->
+`micro_bench_ops` v8 プロファイリングを使用した例:
 
 ```sh
 # build `examples/micro_bench_ops`
@@ -42,7 +49,8 @@ cargo build --release --example micro_bench_ops
 ./target/release/examples/micro_bench_ops --prof
 ```
 
-Example using v8 profiling on `deno_tcp.ts`:
+<!-- Example using v8 profiling on `deno_tcp.ts`: -->
+`deno_tcp.ts` で v8 プロファイリングを使用した例:
 
 ```sh
 # build `deno`
@@ -56,21 +64,30 @@ sleep 1
 kill `pgrep deno`
 ```
 
+<!--
 V8 will write a file in the current directory that looks like this:
 `isolate-0x7fad98242400-v8.log`. To examine this file:
+-->
+V8 はカレントディレクトリに `isolate-0x7fad98242400-v8.log` のようなファイルを書き出します。このファイルを調べるには:
 
 ```sh
 node --prof-process isolate-0x7fad98242400-v8.log > prof.log
 ```
 
-`prof.log` will contain information about tick distribution of different calls.
+<!-- `prof.log` will contain information about tick distribution of different calls. -->
+`prof.log` には、異なるコールの分布に関する情報が含まれます。
 
-To view the log with Web UI, generate JSON file of the log:
+<!-- To view the log with Web UI, generate JSON file of the log: -->
+ログを Web UI でみるには、ログの JSON ファイルを作成してください:
 
+<!--
 Open `rusty_v8/v8/tools/profview/index.html` in your browser, and select
 `prof.json` to view the distribution graphically.
+-->
+`rusty_v8/v8/tools/profview/index.html` をブラウザで開いて、分布をグラフィカルに表示するため `prof.json` を選択してください。
 
-Useful V8 flags during profiling:
+<!-- Useful V8 flags during profiling: -->
+プロファイリング中に役立つ V8 のフラグ:
 
 - --prof
 - --log-internal-timer-events
@@ -79,14 +96,19 @@ Useful V8 flags during profiling:
 - --log-source-code
 - --track-gc-object-stats
 
-To learn more about profiling, check out the following links:
+<!-- To learn more about profiling, check out the following links: -->
+プロファイリングについてもっと知りたい方は以下のリンクを参照してください:
 
 - [https://v8.dev/docs/profile](https://v8.dev/docs/profile)
 
-### Debugging with LLDB
+<!-- ### Debugging with LLDB -->
+### LLDB でデバッグ
 
+<!--
 To debug the deno binary, we can use `rust-lldb`. It should come with `rustc`
 and is a wrapper around LLDB.
+-->
+deno バイナリをデバッグするために、`rust-lldb` を使うことができます。これは `rustc` と LLDB のラッパーからなっています。
 
 ```shell
 $ rust-lldb -- ./target/debug/deno run --allow-net tests/http_bench.ts
@@ -104,9 +126,11 @@ Current executable set to '../deno/target/debug/deno' (x86_64).
 (lldb) r
 ```
 
-### V8 flags
+<!-- ### V8 flags -->
+### V8 フラグ
 
-V8 has many many internal command-line flags:
+<!-- V8 has many many internal command-line flags: -->
+V8 はたくさんの内部コマンドラインフラグを持っています:
 
 ```shell
 $ deno run --v8-flags=--help _
@@ -1087,7 +1111,8 @@ Options:
         type: bool  default: false
 ```
 
-Particularly useful ones:
+<!-- Particularly useful ones: -->
+特に有効なもの:
 
 ```
 --async-stack-trace
