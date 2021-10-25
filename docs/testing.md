@@ -7,6 +7,12 @@ TypeScript code.
 -->
 DenoはJavaScriptやTypeScriptのコードをテストするためにビルトインテストランナーを持っています。
 
+`deno test` will search in `./*` and `./**/*` recursively, for test files:
+
+- named `test.{ts, tsx, js, mjs, jsx}`,
+- or ending with `.test.{ts, tsx, js, mjs, jsx}`,
+- or ending with `_test.{ts, tsx, js, mjs, jsx}`
+
 <!-- ## Writing tests -->
 ## テストを書く
 

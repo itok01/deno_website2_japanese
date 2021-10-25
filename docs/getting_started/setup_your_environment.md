@@ -251,6 +251,11 @@ project (`npm init -y` as necessary), then add the following block to your
 }
 ```
 
+#### Atom
+
+Install [atom-ide-base](https://atom.io/packages/atom-ide-base) package and
+[atom-ide-deno](https://atom.io/packages/atom-ide-deno) package on Atom.
+
 <!-- #### LSP clients -->
 #### LSP クライアント
 
@@ -285,6 +290,10 @@ filetypes = ["typescript", "javascript"]
 roots = [".git"]
 command = "deno"
 args = ["lsp"]
+
+[language.deno.initialization_options]
+enable = true
+lint = true
 ```
 
 <!-- ##### Example for Vim/Neovim -->

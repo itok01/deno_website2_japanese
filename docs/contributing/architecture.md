@@ -41,15 +41,21 @@ console.log(Deno.resources());
 
 ```shell
 > console.table(Deno.metrics())
-┌──────────────────┬────────┐
-│     (index)      │ Values │
-├──────────────────┼────────┤
-│  opsDispatched   │   9    │
-│   opsCompleted   │   9    │
-│ bytesSentControl │  504   │
-│  bytesSentData   │   0    │
-│  bytesReceived   │  856   │
-└──────────────────┴────────┘
+┌─────────────────────────┬───────────┐
+│          (idx)          │  Values   │
+├─────────────────────────┼───────────┤
+│      opsDispatched      │    9      │
+│    opsDispatchedSync    │    0      │
+│   opsDispatchedAsync    │    0      │
+│ opsDispatchedAsyncUnref │    0      │
+│      opsCompleted       │    9      │
+│    opsCompletedSync     │    0      │
+│    opsCompletedAsync    │    0      │
+│ opsCompletedAsyncUnref  │    0      │
+│    bytesSentControl     │   504     │
+│      bytesSentData      │    0      │
+│      bytesReceived      │   856     │
+└─────────────────────────┴───────────┘
 ```
 
 <!-- ### Schematic diagram -->
