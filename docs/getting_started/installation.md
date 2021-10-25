@@ -73,6 +73,10 @@ executable bit on macOS and Linux.
 -->
 Deno実行ファイルは [github.com/denoland/deno/releases](https://github.com/denoland/deno/releases) のzipファイルをダウンロードして手動でインストールすることも可能です。これらのパッケージは1つの実行ファイルのみを含んでいます。macOSとLinuxでは実行可能ビットを設定する必要があります。
 
+Official Docker images are not available at the current time
+([issue#3356](https://github.com/denoland/deno/issues/3356)), but
+[community images](https://github.com/hayd/deno-docker) are available.
+
 <!-- ### Testing your installation -->
 ### インストールの確認
 

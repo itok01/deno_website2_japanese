@@ -32,32 +32,34 @@ function emit(
 ```ts
 interface EmitOptions {
   /** Indicate that the source code should be emitted to a single file
-   * JavaScript bundle that is an ES module (`"esm"`). */
-  bundle?: "esm";
+    * JavaScript bundle that is a single ES module (`"esm"`) or a single file
+    * self contained script we executes in an immediately invoked function
+    * when loaded (`"iife"`). */
+  bundle?: "esm" | "iife";
   /** If `true` then the sources will be typed checked, returning any
-   * diagnostic errors in the result.  If `false` type checking will be
-   * skipped.  Defaults to `true`.
-   * 
-   * *Note* by default, only TypeScript will be type checked, just like on
-   * the command line.  Use the `compilerOptions` options of `checkJs` to
-   * enable type checking of JavaScript. */
+    * diagnostic errors in the result.  If `false` type checking will be
+    * skipped.  Defaults to `true`.
+    *
+    * *Note* by default, only TypeScript will be type checked, just like on
+    * the command line.  Use the `compilerOptions` options of `checkJs` to
+    * enable type checking of JavaScript. */
   check?: boolean;
   /** A set of options that are aligned to TypeScript compiler options that
-   * are supported by Deno. */
+    * are supported by Deno. */
   compilerOptions?: CompilerOptions;
   /** An [import-map](https://deno.land/manual/linking_to_external_code/import_maps#import-maps)
-   * which will be applied to the imports. */
+    * which will be applied to the imports. */
   importMap?: ImportMap;
   /** An absolute path to an [import-map](https://deno.land/manual/linking_to_external_code/import_maps#import-maps).
-   * Required to be specified if an `importMap` is specified to be able to
-   * determine resolution of relative paths. If a `importMap` is not
-   * specified, then it will assumed the file path points to an import map on
-   * disk and will be attempted to be loaded based on current runtime
-   * permissions.
-   */
+    * Required to be specified if an `importMap` is specified to be able to
+    * determine resolution of relative paths. If a `importMap` is not
+    * specified, then it will assumed the file path points to an import map on
+    * disk and will be attempted to be loaded based on current runtime
+    * permissions.
+    */
   importMapPath?: string;
   /** A record of sources to use when doing the emit.  If provided, Deno will
-   * use these sources instead of trying to resolve the modules externally. */
+    * use these sources instead of trying to resolve the modules externally. */
   sources?: Record<string, string>;
 }
 ```
@@ -232,11 +234,11 @@ if (diagnostics.length) {
 
 <!--
 `Deno.emit()` is also capable of providing output similar to `deno bundle` on
-the command line. This is enabled by setting the _bundle_ option to `"esm"`.
-(Currently Deno only supports bundling as a single file ES module, but there are
-plans to add support for an IIFE bundle format as well):
+the command line. This is enabled by setting the _bundle_ option to `"esm"` or
+`"iife"`. Currently Deno supports bundling as a single file ES module (`"esm"`)
+or a single file self contained legacy script (`"iife"`).
 -->
-`Deno.emit()` はコマンドラインの `deno bundle` と似たような出力を提供することもできます。これは _bundle_ オプションを `"esm"` に設定することで有効化できます。(現在では Deno は単一ファイル ES モジュールとしてバンドルすることしかサポートしていませんが、IIFE バンドルフォーマットもサポートする計画があります。)
+`Deno.emit()` はコマンドラインの `deno bundle` と似たような出力を提供することもできます。これは _bundle_ オプションを `"esm"` か `"iife"` に設定することで有効化できます。現在、Denoは単一ファイルのESモジュール (`"esm"`) または単一ファイルの自己完結型レガシースクリプト (`"iife"`) としてのバンドルをサポートしています。
 
 ```ts
 const { files, diagnostics } = await Deno.emit("./mod.ts", {

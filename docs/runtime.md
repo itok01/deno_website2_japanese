@@ -27,11 +27,11 @@ For more details, view the chapter on
 
 <!--
 All APIs that are not web standard are contained in the global `Deno` namespace.
-It has the APIs for reading from files, opening TCP sockets, and executing
-subprocesses, etc.
+It has the APIs for reading from files, opening TCP sockets, serving HTTP, and
+executing subprocesses, etc.
 -->
 Web標準でないすべてのAPIはグローバルである `Deno` 名前空間に含まれています。
-これらにはファイルの読み込み、TCPソケットの開放、サブプロセスの実行などのAPIが含まれています。
+これらにはファイルの読み込み、TCPソケットの開始、HTTPの提供、サブプロセスの実行などのAPIが含まれています。
 
 <!--
 The TypeScript definitions for the Deno namespaces can be found in the
