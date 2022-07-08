@@ -5,7 +5,7 @@
 ## コピーライトヘッダー
 
 <!-- Most modules in the repository should have the following copyright header: -->
-リポジトリ内のほとんどのモジュールはルギのコピーライトヘッダーを持つべきです:
+リポジトリ内のほとんどのモジュールは次のコピーライトヘッダーを持つべきです:
 
 ```ts
 // Copyright 2018-2021 the Deno authors. All rights reserved. MIT license.
